@@ -1,32 +1,26 @@
-# Daily Activity Log
+# [Start Bootstrap](http://startbootstrap.com/) - [Creative](http://startbootstrap.com/template-overviews/creative/)
 
-If you are here, you probably already know about the [**Daily Activity Log Concept**](https://github.com/joebew42/daily-activity-log-concept) and you want to start your daily activity log. You can fork this repository as your github pages repository and start to share your daily activities with the Internet. If you already have a github pages repository, you can use this repo as subfolder of your personal pages (i.e. `http://username.github.io/daily/events.xml`).
+[Creative](http://startbootstrap.com/template-overviews/creative/) is a one page creative theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-## Steps to get started
+## Getting Started
 
-- Fork this repository
-- Rename the repository to `[your_github_username].github.io`
-- Clone the repository to your computer
-- Add new events to `events.xml`
-- Commit & Push
-- Visit your daily activity log at `http://[your_github_username].github.io/events`
+To use this theme, choose one of the following options to get started:
+* Download the latest release on Start Bootstrap
+* Fork this repository on GitHub
 
-## Further steps
+## Bugs and Issues
 
-- Style your log by editing `events.xsl` and `events.css`
+Have a bug or an issue with this theme? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-creative/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/creative/).
 
-## Some real usages
+## Creator
 
-- [joebew42](http://joebew42.github.io/events.xml)
-- [pdincau](http://pdincau.github.io/events.xml)
-- [0xNan](http://0xnan.github.io/esl/events.xml)
-- [BFranzcesco](http://bfranzcesco.github.io/events.xml)
-- Let me know of your _daily-activity-log_ and I'll put it here
+Start Bootstrap was created by and is maintained by **David Miller**, Managing Partner at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
 
-## How to contribute
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-- Fork this repository
-- Create a branch
-- Write your local changes
-- Squash all your commits
-- Push & make a Pull-request
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-creative/blob/gh-pages/LICENSE) license.
