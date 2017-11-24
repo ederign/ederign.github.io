@@ -22,6 +22,6 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 description: your resume
-baseurl: "/"
+baseurl: ""
 url: http://ederign.github.io/
 color: "#f2f2f2"
