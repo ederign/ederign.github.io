@@ -4,7 +4,7 @@ layout: default
 
 <div class="container row">
     <h1 class="cv-title"><span class="black white-text">Weekly Journal</span></h1>
-    {% assign steps = site.steps | sort: 'date' %}
+    {% assign steps = site.steps | sort: 'date' | reverse %}
     {% for step in steps %}
     {% if step.type == 'weekly' %}
     <div class="item">
@@ -12,7 +12,7 @@ layout: default
         <h2 class="item-date">{{ step.date | date: '%m/%d/%Y' }}{% if step.enddate %} - {{ step.enddate | date: '%m/%d/%Y' }}{% endif %}</h2>
         <div class="card-panel">
             <h3 class="card-title">
-                {{ step.title }} {{ step.type }}
+                {{ step.title }}
             </h3>
             <p>
                 {{ step.content }}
