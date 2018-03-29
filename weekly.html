@@ -1,0 +1,14 @@
+--- layout: page title: Weekly ---
+<section class="list">
+    {% for p in site.weekly %} {% if post.projects %} {% assign steps = site.weekly | sort: 'date' | reverse %} {% for step in
+    steps %} {% if step.type == 'weekly' %}
+    <div class="timeline-item" date-is={{ step.date | date: '%m/%d/%Y' }}{% if step.enddate %} - {{ step.enddate | date:
+        '%m/%d/%Y' }}{% endif %}>
+        <h1>{{ step.title }}</h1>
+        <p>
+            {{ step.content }}
+        </p>
+    </div>
+    {% endif %} {% endfor %}
+
+</section>
