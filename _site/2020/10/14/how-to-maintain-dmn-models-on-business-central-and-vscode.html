@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Eder Ignatowicz">
+
+  <title>
+    Eder Ignatowicz
+    |
+    
+    How to maintain DMN models on Business Central and VSCode
+    
+  </title>
+  <meta name="description"
+    content="Currently, the DMN editor is supported in a variety of environments. You can create a DMN model in an online editor, in a chrome extension, in a desktop app,...">
+
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@500;600;700&display=block">
+
+  <link rel="stylesheet" href="/assets/normalize.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/changes.css">
+  <link rel="canonical" href="http://localhost:4000/2020/10/14/how-to-maintain-dmn-models-on-business-central-and-vscode.html">
+  <link rel="alternate" type="application/rss+xml" title="Eder Ignatowicz"
+    href="/feed.xml">
+
+  
+</head>
+
+
+<body>
+  <main class="wrapper">
+    <header>
+  
+  
+  <nav>
+    <a href="/">
+      Posts
+    </a>
+    
+     
+      
+    
+    <a href="/about/">
+      About
+    </a>   
+      
+      
+      
+    
+    <a href="/talks/">
+      Talks
+    </a>   
+      
+    <a href="/feed.xml">
+      RSS
+    </a>
+  </nav>
+</header>
+
+    <section class="container">
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    
+
+    <h1 itemprop="name headline">How to maintain DMN models on Business Central and VSCode</h1>
+    <p>
+      <time datetime="2020-10-14T23:00:00-04:00" itemprop="datePublished">
+        Oct 14, 2020 ・ 3 min read
+      </time>
+    </p>
+
+    <div itemprop="articleBody">
+      <p>Currently, the DMN editor is supported in a variety of environments. You can create a DMN model in an online editor, in a chrome extension, in a desktop app, in a VSCode extension, and even on Business Central.</p>
+
+<p>Until the latest release, you could face some differences between a model created by <strong>VSCode</strong> and a one created by <strong>Business Central</strong>. Now, this post aims to demonstrate that both environments are fully compatible by showing the same project from two perspectives: <strong>I) how to create a project on VSCode and import it on Business Central</strong>, and <strong>II) how to create a project on Business Central and import it on VSCode</strong>.</p>
+
+<p>Let’s check both environments.</p>
+
+<p>–</p>
+
+<h2 id="the-vscode-perspective">The VSCode perspective</h2>
+
+<p>Let’s get started to understand how to use VSCode to handle a DMN file in a context of a Business Central project by relying only on VSCode.</p>
+
+<ul>
+  <li>In a shell prompt, enter the following <code class="language-plaintext highlighter-rouge">mvn</code> command to create a project:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mvn archetype:generate \
+  -DarchetypeGroupId=org.kie \
+  -DarchetypeArtifactId=kie-kjar-archetype \
+  -DarchetypeVersion=7.44.0.Final \
+  -DartifactId="Some Application" \
+  -DgroupId="org.kie" \
+  -DartifactId="vscode-2-bc"
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>When the archetype plug-in switches to interactive mode, accept the default values for the remaining fields</p>
+  </li>
+  <li>
+    <p>After generating your project, create a DMN asset at the <code class="language-plaintext highlighter-rouge">src/main/resources/&lt;your package&gt;</code> directory and populate it with some interesting decision, like the one in the video:</p>
+  </li>
+</ul>
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/x8SeRDmRes0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<ul>
+  <li>Now, initialize the git repository for your project, add all files, and commit them:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git init &amp;&amp; git add . &amp;&amp; git commit -m "Init"
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Use <code class="language-plaintext highlighter-rouge">pwd</code> to get the local path of your project</p>
+  </li>
+  <li>
+    <p>Open the Business Central spaces screen, click on <strong>Import Project</strong>, and set <code class="language-plaintext highlighter-rouge">file://&lt;the local path of your project&gt;</code> as the <strong>Repository URL</strong></p>
+  </li>
+</ul>
+
+<p><a href="/assets/how-to-maintain-dmn-models-on-business-central-and-vscode-import.png"><img src="/assets/how-to-maintain-dmn-models-on-business-central-and-vscode-import.png" alt="Import popup screenshot" title="Import popup screenshot" /></a></p>
+
+<ul>
+  <li>Done! You’ve successfully created a Business Central project relying only on your terminal and on your VSCode DMN editor! 🎉</li>
+</ul>
+
+<p>–</p>
+
+<h2 id="the-business-central-perspective">The Business Central perspective</h2>
+
+<p>Alright, now let’s do the opposite. Let’s create a project on Business Central and import it to VSCode.</p>
+
+<ul>
+  <li>
+    <p>Create a project on <strong>Business Central</strong> in the spaces screen</p>
+  </li>
+  <li>
+    <p>Create a DMN asset and populate it with some interesting decision, like the one in the video above</p>
+  </li>
+  <li>
+    <p>Now, click on “Settings” to open the project settings screen</p>
+  </li>
+</ul>
+
+<p><a href="/assets/how-to-maintain-dmn-models-on-business-central-and-vscode-settings.png"><img src="/assets/how-to-maintain-dmn-models-on-business-central-and-vscode-settings.png" alt="Setting tab screenshot" title="Setting tab screenshot" /></a></p>
+
+<ul>
+  <li>Copy the HTTP URL of your project</li>
+</ul>
+
+<p><a href="/assets/how-to-maintain-dmn-models-on-business-central-and-vscode-repo-url.png"><img src="/assets/how-to-maintain-dmn-models-on-business-central-and-vscode-repo-url.png" alt="Business Central repository URL screenshot" title="Business Central repository URL screenshot" /></a></p>
+
+<ul>
+  <li>Clone the URL of your project</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone http://localhost:8080/business-central/git/MySpace/bc-2-vscode
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p>Open the project directory with VSCode</p>
+  </li>
+  <li>
+    <p>Done! You’ve successfully opened your Business Central project  with VSCode. You can now perform changes into your DMN mode, commit them with git, and the Business Central will automatically detect them</p>
+  </li>
+</ul>
+
+<p>–</p>
+
+<p>I hope you’ve enjoyed this quick tutorial! Stay tuned for new DMN features! :-)</p>
+
+
+    </div>
+
+    
+    <div class="disqus-thread">
+
+  <hr />
+  <div id="disqus_thread"></div>
+
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/2020/10/14/how-to-maintain-dmn-models-on-business-central-and-vscode.html';
+      this.page.identifier = 'http://localhost:4000/2020/10/14/how-to-maintain-dmn-models-on-business-central-and-vscode.html';
+    };
+
+    (function () {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://ederign.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+      comments powered by Disqus.
+    </a>
+  </noscript>
+</div>
+
+    
+  </article>
+</section>
+
+    <footer>
+  <p>&copy; 2020 Eder Ignatowicz.</p>
+  <span>Originally designed by Guilherme Carreiro.</spam>
+</footer>
+
+  </main>
+</body>
+
+</html>

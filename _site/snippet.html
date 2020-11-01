@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Eder Ignatowicz">
+
+  <title>
+    Eder Ignatowicz
+    |
+    
+    Snippet
+    
+  </title>
+  <meta name="description"
+    content="Eder Ignatowicz&#39;s Personal blog">
+
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@500;600;700&display=block">
+
+  <link rel="stylesheet" href="/assets/normalize.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/changes.css">
+  <link rel="canonical" href="http://localhost:4000/snippet">
+  <link rel="alternate" type="application/rss+xml" title="Eder Ignatowicz"
+    href="/feed.xml">
+
+  
+</head>
+
+
+<body>
+  <main class="wrapper">
+    <header>
+  
+  
+  <nav>
+    <a href="/">
+      Posts
+    </a>
+    
+     
+      
+    
+    <a href="/about/">
+      About
+    </a>   
+      
+      
+      
+    
+    <a href="/talks/">
+      Talks
+    </a>   
+      
+    <a href="/feed.xml">
+      RSS
+    </a>
+  </nav>
+</header>
+
+    <div id="snippet">
+  <div class="row">
+    <div class="column column-50">
+      <h3>Code</h3>
+    </div>
+    <div class="column column-50">
+      <h3>Preview</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column column-50">
+      <div class="highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight">
+            <code id="code" class="html"></code>
+          </pre>
+        </div>
+      </div>
+    </div>
+    <div class="column column-50">
+      <iframe id="livePreview"></iframe>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  (function () {
+
+    const gistId = new URLSearchParams(window.location.search).get('gist_id');
+    const snippet = document.querySelector('#snippet');
+    const livePreview = document.querySelector('#livePreview');
+    const code = document.querySelector('#code');
+
+    function showLivePreview(content) {
+      const livePreviewDocument = livePreview.contentWindow.document;
+      livePreviewDocument.open();
+      livePreviewDocument.write(content);
+      livePreviewDocument.close();
+    }
+
+    function showHighlightedCode(content) {
+      code.innerHTML = hljs.highlightAuto(content).value;
+    }
+
+    function showPreview(content) {
+      showLivePreview(content);
+      showHighlightedCode(content);
+      snippet.hidden = false;
+    }
+
+    snippet.hidden = true;
+
+    fetch('https://api.github.com/gists/' + gistId)
+      .then(function (res) {
+        return res.json().then(function (body) {
+          if (res.status === 200) {
+            return body;
+          }
+        });
+      })
+      .then(function (info) {
+        const fileName = Object.keys(info.files)[ 0 ];
+        const content = info.files[ fileName ].content;
+
+        showPreview(content);
+      })
+      .catch(function (err) {
+        console.log(err)
+        window.location.href = '/404.html';
+      });
+  }());
+</script>
+
+    <footer>
+  <p>&copy; 2020 Eder Ignatowicz.</p>
+  <span>Originally designed by Guilherme Carreiro.</spam>
+</footer>
+
+  </main>
+</body>
+
+</html>

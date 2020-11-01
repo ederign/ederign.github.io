@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Eder Ignatowicz">
+
+  <title>
+    Eder Ignatowicz
+    |
+    
+    DMN as the brain of your Financial Bot
+    
+  </title>
+  <meta name="description"
+    content="October was a great month at work :-)">
+
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@500;600;700&display=block">
+
+  <link rel="stylesheet" href="/assets/normalize.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/changes.css">
+  <link rel="canonical" href="http://localhost:4000/2018/11/29/dmn-as-the-brain-of-your-financial-bot.html">
+  <link rel="alternate" type="application/rss+xml" title="Eder Ignatowicz"
+    href="/feed.xml">
+
+  
+</head>
+
+
+<body>
+  <main class="wrapper">
+    <header>
+  
+  
+  <nav>
+    <a href="/">
+      Posts
+    </a>
+    
+     
+      
+    
+    <a href="/about/">
+      About
+    </a>   
+      
+      
+      
+    
+    <a href="/talks/">
+      Talks
+    </a>   
+      
+    <a href="/feed.xml">
+      RSS
+    </a>
+  </nav>
+</header>
+
+    <section class="container">
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    
+
+    <h1 itemprop="name headline">DMN as the brain of your Financial Bot</h1>
+    <p>
+      <time datetime="2018-11-29T22:00:00-05:00" itemprop="datePublished">
+        Nov 29, 2018 ・ 4 min read
+      </time>
+    </p>
+
+    <div itemprop="articleBody">
+      <p>October was a great month at work :-)</p>
+
+<p>The DMN editor (the tool I’ve been working in last weeks) was released as a tech preview in the Business Central, and I could write an exciting blog post presenting its features to the community. You can read more about it <a href="http://blog.athico.com/2018/10/new-dmn-editor-preview.html">here</a> 🤓</p>
+
+<p>With the new editor, users can create their DMN diagrams and make them available as a REST service. There are many complex and challenging use cases for this new feature, but I’m going to demonstrate an easy and fun one here.</p>
+
+<p>Do you remember the bot we wrote in the last post?
+<a href="/assets/demo-bot.gif"><img src="/assets/demo-bot.gif" alt="Demo" title="Demo" /></a></p>
+
+<p>Great! In summary, our bot receives the value of an expense, classifies it, stores, and finally, he answers “Ok, fine!”. No more than that.</p>
+
+<p>Today, we’re going to make our dummy bot smarter. We want to ask:</p>
+
+<p><b><em>- Is a good idea to buy a Nintendo Switch?</em></b></p>
+
+<p>..and get something like this as an answer:</p>
+
+<p><b><em>- Hmmm… Yes, you can! You have the budget for this.</em></b></p>
+
+<p>Impressive, right? Ok, let’s do this in three simple steps.</p>
+
+<h3 id="1-setup-the-environment">1) Setup the environment</h3>
+
+<p>The first step is to enable the DMN editor, as it’s available as a tech preview and hidden by default. Just go to <code class="language-plaintext highlighter-rouge">Settings -&gt; Roles</code>, select the role you’re logged in (for example, “admin”) and remove the “DMN Designer” exception in the “Permissions” section.</p>
+
+<p>Now that you have the DMN Editor enabled, let’s create a new project: Go to “Projects”, click on “Add asset” and then open the “DMN Preview”. Here you can explore the editor and create your DMN file.</p>
+
+<p>You can check more details about this step <a href="http://blog.athico.com/2018/10/new-dmn-editor-preview.html">here</a>, but if you can see the following screen, you’re fine :-)
+<a href="/assets/dmn-editor.png"><img src="/assets/dmn-editor.png" alt="DMN Editor" title="DMN Editor" /></a></p>
+
+<h3 id="2-the-brain-">2) The Brain 🧠</h3>
+
+<p>As you’re probably expecting, the brain of our bot will be a DMN file. The diagram I’ve created to represent the logic of the mind is this one:
+<a href="/assets/dmn-diagram.gif"><img src="/assets/dmn-diagram.gif" alt="DMN Diagram" title="DMN Diagram" /></a></p>
+
+<p>We have four input nodes (<code class="language-plaintext highlighter-rouge">Current Month</code>, <code class="language-plaintext highlighter-rouge">Current Week</code>, <code class="language-plaintext highlighter-rouge">Balance</code> and <code class="language-plaintext highlighter-rouge">Expense Value</code>) and two decision nodes (<code class="language-plaintext highlighter-rouge">Is special month?</code> and <code class="language-plaintext highlighter-rouge">Message</code>). The input nodes represent the variables provided by us in the REST service request. This data is used by the decision nodes to produce an output.</p>
+
+<p>Two Decision Tables help each decision node to determine their output. For example, take a look at the Decision Table (DT) for the <code class="language-plaintext highlighter-rouge">Is special month?</code> element:
+<a href="/assets/is-special-month.png"><img src="/assets/is-special-month.png" alt="Is special month?" title="Is special month?" /></a></p>
+
+<p>Notice that the default output is false, but when the <code class="language-plaintext highlighter-rouge">Current Month</code> is <code class="language-plaintext highlighter-rouge">"January"</code>, <code class="language-plaintext highlighter-rouge">"May"</code>, <code class="language-plaintext highlighter-rouge">"August"</code> or <code class="language-plaintext highlighter-rouge">"December"</code> the produced output is <code class="language-plaintext highlighter-rouge">true</code>. I’ve added a short description to each rule, but this is optional ;-)</p>
+
+<p>With that node and its simple DT, our bot can discover if I’m in a festive month (when I generally expend more money). But now let’s take a look at the significant node, the <code class="language-plaintext highlighter-rouge">Message</code>, which is responsible for the message that our bot says.</p>
+
+<p>In the DT for the <code class="language-plaintext highlighter-rouge">Message</code>, we’re considering three input variables (<code class="language-plaintext highlighter-rouge">Current Week</code>, <code class="language-plaintext highlighter-rouge">Balance</code>, <code class="language-plaintext highlighter-rouge">Expense Value</code>) and the output from the <code class="language-plaintext highlighter-rouge">Is special month?</code> node:
+<a href="/assets/message.png"><img src="/assets/message.png" alt="Message" title="Message" /></a></p>
+
+<p>Notice what rule 5 says: <em>“When the balance is more or equals to 500, we’re in a special month, doesn’t a matter what week of the month we are, and the value of the expense is less than 500”</em>, and considering these conditions, our bot says: “Generally, I would say ‘yes’, but I think you’re going to have other important expenses this month”.</p>
+
+<p>It’s pretty impressive the huge amount of complex scenarios we can represent using Decision Tables, isn’t? 😃</p>
+
+<h3 id="3-calling-the-dmn-model-from-ruby">3) Calling the DMN model from Ruby</h3>
+
+<p>Finally, go to <code class="language-plaintext highlighter-rouge">Projects -&gt; Your project</code> and click on “Deploy” to deploy our DMN model in a KIE Server.</p>
+
+<p>Calling our model is pretty straightforward, see an example in Ruby:
+<script src="https://gist.github.com/karreiro/d85c1a1dce8ef3a38821a3584ab02a4b.js"></script></p>
+
+<h3 id="the-end-">The End 🤖</h3>
+
+<p>Probably you already have an idea about how to integrate the script above with the bot we coded together in the last bot. So, I won’t spoiler you. I’m sure you’ll have some fun implementing it ;-)</p>
+
+<p>Here’s my bot integrated with the KIE Server (using the DMN model above):
+<a href="/assets/dmn-bot-demo.gif">
+  <img src="/assets/dmn-bot-demo.gif" alt="DMN Bot Demo" title="DMN Bot Demo" style="width: 45%;" />
+</a></p>
+
+<p>I hope you enjoyed reading this, and remember…</p>
+
+<p>Have fun :-)</p>
+
+    </div>
+
+    
+    <div class="disqus-thread">
+
+  <hr />
+  <div id="disqus_thread"></div>
+
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/2018/11/29/dmn-as-the-brain-of-your-financial-bot.html';
+      this.page.identifier = 'http://localhost:4000/2018/11/29/dmn-as-the-brain-of-your-financial-bot.html';
+    };
+
+    (function () {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://ederign.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+      comments powered by Disqus.
+    </a>
+  </noscript>
+</div>
+
+    
+  </article>
+</section>
+
+    <footer>
+  <p>&copy; 2020 Eder Ignatowicz.</p>
+  <span>Originally designed by Guilherme Carreiro.</spam>
+</footer>
+
+  </main>
+</body>
+
+</html>
