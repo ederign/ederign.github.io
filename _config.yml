@@ -17,7 +17,7 @@ plugins:
   - jekyll-feed
 
 talks:
-  - title: "JavaScript<br />The Right Way"
+  - title: "FIXME"
     conference: "FLISOL Campinas"
     year: 2013
     color: "#FBAA18"
