@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Eder Ignatowicz">
+
+  <title>
+    Eder Ignatowicz
+    |
+    
+    Kogito Tooling 0.8.3 Released!
+    
+  </title>
+  <meta name="description"
+    content="We have just launched a fresh new Kogito Tooling release! 🎉">
+
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Raleway:wght@500;600;700&display=block">
+
+  <link rel="stylesheet" href="/assets/normalize.css">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="stylesheet" href="/assets/changes.css">
+  <link rel="canonical" href="http://localhost:4000/2019/09/29/kogito-tooling-083-release.html">
+  <link rel="alternate" type="application/rss+xml" title="Eder Ignatowicz"
+    href="/feed.xml">
+
+  
+</head>
+
+
+<body>
+  <main class="wrapper">
+    <header>
+  
+  
+  <nav>
+    <a href="/">
+      Posts
+    </a>
+    
+     
+      
+    
+    <a href="/about/">
+      About
+    </a>   
+      
+      
+      
+    
+    <a href="/talks/">
+      Talks
+    </a>   
+      
+    <a href="/feed.xml">
+      RSS
+    </a>
+  </nav>
+</header>
+
+    <section class="container">
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    
+
+    <h1 itemprop="name headline">Kogito Tooling 0.8.3 Released!</h1>
+    <p>
+      <time datetime="2019-09-29T23:00:00-04:00" itemprop="datePublished">
+        Sep 29, 2019 ・ 5 min read
+      </time>
+    </p>
+
+    <div itemprop="articleBody">
+      <p>We have just launched a fresh new Kogito Tooling release! 🎉</p>
+
+<p>On the 0.8.3 <a href="https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.3">release</a>, we made a lot of improvements and bug fixes. This post will give a quick overview of this release, and also add some highlights of our <a href="https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.2">0.8.2</a> and <a href="https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.3">0.8.1</a> releases. I hope you enjoy it!</p>
+
+<h2 id="bpmn-and-dmn-standalone-editors">BPMN and DMN Standalone Editors</h2>
+
+<p>Since 0.7.2.alpha3 we started <a href="https://www.npmjs.com/package/@kogito-tooling/kie-editors-standalone">shipping</a> a new component of the KIE tooling, our standalone BPMN and DMN Editors. On the 0.8.1 release, we delivered the first official version of this cool library.  🎉</p>
+
+<p>These Standalone Editors provide a straightforward way to use our tried-and-true DMN and BPMN Editors embedded in your web applications.</p>
+
+<p>The editors are now distributed in a self-contained library that provides an all-in-one JavaScript file for each of them that can be interacted with using a comprehensive API for setup and control it.</p>
+
+<p>Now it’s super easy to embed our editors in your applications, see this gist <a href="`https://gist.githubusercontent.com/ederign/88e3ddb31c2c1374a0afc6bfede80258/raw/feb180e8f3a8ff74701cb5a5e1383f0250c8f260/dmn-standalone.js`">example</a>:</p>
+
+<p><a href="/assets/2021/standalone.jpg"><img src="/assets/2021/standalone.jpg" alt="Standalone" title="Standalone" /></a></p>
+
+<h2 id="embed-your-bpmn-and-dmn-models">Embed your BPMN and DMN models</h2>
+
+<p>In the 0.8.2 release, we have introduced a new feature that will enable you easily embed your BPMN and DMN models on any web application with an iframe. We have updated our toolbar on the Business Modeler Preview, and now under the “Share” menu, there is an “Embed” option.</p>
+
+<p><a href="/assets/2021/embed.gif"><img src="/assets/2021/embed.gif" alt="Embed" title="Embed" /></a></p>
+
+<p>See the full <a href="https://blog.kie.org/2021/01/embed-your-bpmn-and-dmn-models.html">blog post</a> for an in-depth look into this feature.</p>
+
+<h2 id="dmn-editor-now-opens-11-and-13-assets">DMN editor now opens 1.1 and 1.3 assets</h2>
+<p>The DMN editor continues evolving towards making users’ lives as simple as possible. On Kogito 0.8.1, we introduce a new mechanism to open DMN 1.1 and 1.3 assets.</p>
+
+<p><a href="/assets/2021/dmn-1-1-and-1-3-assets.gif"><img src="/assets/2021/dmn-1-1-and-1-3-assets.gif" alt="DMN13" title="DMN13" /></a></p>
+
+<h2 id="new-features-fixed-issues-and-improvements">New Features, fixed issues, and improvements</h2>
+<p>We also made some new features, a  lot of refactorings and improvements, with highlights to:</p>
+
+<h3 id="infrastructure">Infrastructure</h3>
+<ul>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3718">KOGITO-3718</a>] - Importing DMN as Included Model in VS Code on Windows</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4219">KOGITO-4219</a>]  - [Chrome Extension] “Copy link to Online editor” button doesn’t work on private repositories</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4220">KOGITO-4220</a>]  - [Chrome Extension] The “Go to Home page” link doesn’t work</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2693">KOGITO-2693</a>] - Standalone editors (Milestone 1)</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3450">KOGITO-3450</a>] - Export the Online Editor content using the Standalone Editor</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3455">KOGITO-3455</a>] - Discuss and plan productization embedded DMN and BPMN editors</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2629">KOGITO-2629</a>] - [VSCode] Undo/redo command don’t fire for webviews if used from command palette</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2697">KOGITO-2697</a>] - Recent saved file is not being show in Recents list</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3808">KOGITO-3808</a>] - Fix Keyboard Shortcuts modal title on VS Code dark theme</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3884">KOGITO-3884</a>] - Save SVG file using the kieserver naming convention</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3348">KOGITO-3348</a>] - Fix Open SVG popup to not open SVG when clicking the X button</li>
+</ul>
+
+<h3 id="editors">Editors</h3>
+<ul>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4122">KOGITO-4122</a>] - [Test Scenario Editor] Improve Test Scenario creation UX</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3302">KOGITO-3302</a>] - Allow to select any DMN asset in Wizard</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4122">KOGITO-4049</a>] - Cannot open Violation Scenarios.scesim in VScode</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4197">KOGITO-4197</a>] - [DMN Designer] DMN 1.1 model can not be fixed to proper DMN 1.2</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4315">KOGITO-4315</a>] - Stunner - Cannot undo/redo more than once</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3853">KOGITO-3853</a>] -  [DMN Designer] Move the “structure” option to top of the Data Type drop-down</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4104">KOGITO-4104</a>] -  [DMN Designer] Rename “Dismiss” to “Skip tour”</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-1429">KOGITO-1429</a>]  - DefaultXmlFormatter: Should return plain text if formatting fails</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-1677">KOGITO-1677</a>]  - [DMN editor] User cannot open DMN editor if it was previously saved in workspace</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2187">KOGITO-2187</a>]  - DMN editor when moving DS output decision becomes encapsulated</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2515">KOGITO-2515</a>]  - DMN Editor decision service wrong layout</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2712">KOGITO-2712</a>]] - [DMN Designer] VS Code Included models self reference</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3151">KOGITO-3151</a>]  - [DMN Designer] Copied value is pasted twice</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3476">KOGITO-3476</a>]  - DMN decision table “Unable to resolve type reference ‘UNDEFINED’” in simple data types</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4124">KOGITO-4124</a>]  - Error when adding constraints to a data type</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-4165">KOGITO-4165</a>]  - [DMN Designer] ‘continue’ vs ‘Continue’</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3885">KOGITO-3885</a>] -  [DMN Designer] Show parameters list for Decision Services</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3805">KOGITO-3805</a>] - [DMN Designer] Convert DMN 1.1/1.3 models to version 1.2</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-2770">KOGITO-2770</a>] - [Test Scenario Editor] Changes on Setting Docks must activate isDirty status</li>
+  <li>[<a href="https://issues.redhat.com/browse/KOGITO-3696">KOGITO-3696</a>] - DMN Editor regression failing display edge when xml missing DMNDI</li>
+</ul>
+
+<h2 id="further-readingwatching">Further Reading/Watching</h2>
+<p>We had recently some cool talks at KIE youtube channel:</p>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=5HSdDQzG0wE&amp;t=1s&amp;ab_channel=KIE">KieLive#24</a>  DMN: squeeze the most out of these features, by Matteo;</li>
+  <li><a href="https://www.youtube.com/watch?v=hY_eERFX_DQ&amp;ab_channel=KIE">KieLive#23</a>  Kogito + Quarkus: the Marriage Made on a Cloud, by Edoardo</li>
+  <li><a href="https://www.youtube.com/watch?v=ENKHGBMDaCM&amp;ab_channel=KIE">KieLive#22</a> OptaPlanner Shadow Variables for the Vehicle Routing Problem and Task Assignment, by Geoffrey;</li>
+</ul>
+
+<p>I would like to also recommend the recent <a href="https://blog.kie.org/2021/01/how-to-use-a-pmml-file-in-dmn-editor-vscode.html">article</a> from Yeser, where he provides a complete step-by-step tutorial to import and process a PMML model inside the DMN Editor in VSCode.</p>
+
+<h2 id="thank-you-to-everyone-involved">Thank you to everyone involved!</h2>
+
+<p>I would like to thank everyone involved with this release, from the excellent KIE Tooling Engineers to the lifesavers QEs and the UX people that help us look awesome!</p>
+
+    </div>
+
+    
+    <div class="disqus-thread">
+
+  <hr />
+  <div id="disqus_thread"></div>
+
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://localhost:4000/2019/09/29/kogito-tooling-083-release.html';
+      this.page.identifier = 'http://localhost:4000/2019/09/29/kogito-tooling-083-release.html';
+    };
+
+    (function () {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://ederign.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+      comments powered by Disqus.
+    </a>
+  </noscript>
+</div>
+
+    
+  </article>
+</section>
+
+    <footer>
+  <span>&copy; 2021 Eder Ignatowicz.</span><br/>
+  <span>Originally designed by Guilherme Carreiro.</spam>
+</footer>
+
+  </main>
+</body>
+
+</html>

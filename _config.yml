@@ -9,6 +9,10 @@ google_analytics: "UA-119890893-1"
 twitter_username: ederign
 github_username: ederign
 markdown: kramdown
+permalink: pretty
+exclude:
+  - Gemfile*
+  - Rakefile
 
 disqus:
   shortname: ederign
