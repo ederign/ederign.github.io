@@ -18,10 +18,10 @@ iframe {
   margin-bottom: 1rem; }
 
 ::selection {
-  background: #DDBA44; }
+  background: #eeeeee; }
 
 blockquote {
-  border-left: 0.3rem solid #dddddd;
+  border-left: 0.3rem solid #ececec;
   margin-left: 0;
   margin-right: 0;
   padding: 1rem 1.5rem; }
@@ -33,8 +33,8 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  background-color: #ab8333;
-  border: 0.1rem solid #ab8333;
+  background-color: #b91b55;
+  border: 0.1rem solid #b91b55;
   border-radius: 0.4rem;
   color: #ffffff;
   cursor: pointer;
@@ -78,15 +78,15 @@ input[type='submit'] {
     input[type='reset'][disabled]:hover,
     input[type='submit'][disabled]:focus,
     input[type='submit'][disabled]:hover {
-      background-color: #ab8333;
-      border-color: #ab8333; }
+      background-color: #b91b55;
+      border-color: #b91b55; }
   .button.button-outline,
   button.button-outline,
   input[type='button'].button-outline,
   input[type='reset'].button-outline,
   input[type='submit'].button-outline {
     background-color: transparent;
-    color: #ab8333; }
+    color: #b91b55; }
     .button.button-outline:focus, .button.button-outline:hover,
     button.button-outline:focus,
     button.button-outline:hover,
@@ -109,7 +109,7 @@ input[type='submit'] {
     input[type='submit'].button-outline[disabled]:focus,
     input[type='submit'].button-outline[disabled]:hover {
       border-color: inherit;
-      color: #ab8333; }
+      color: #b91b55; }
   .button.button-clear,
   button.button-clear,
   input[type='button'].button-clear,
@@ -117,7 +117,7 @@ input[type='submit'] {
   input[type='submit'].button-clear {
     background-color: transparent;
     border-color: transparent;
-    color: #ab8333; }
+    color: #b91b55; }
     .button.button-clear:focus, .button.button-clear:hover,
     button.button-clear:focus,
     button.button-clear:hover,
@@ -139,7 +139,7 @@ input[type='submit'] {
     input[type='reset'].button-clear[disabled]:hover,
     input[type='submit'].button-clear[disabled]:focus,
     input[type='submit'].button-clear[disabled]:hover {
-      color: #ab8333; }
+      color: #b91b55; }
 
 code {
   background: #F7F7F7;
@@ -151,7 +151,7 @@ code {
 
 pre {
   background: #F7F7F7;
-  border-left: 0.3rem solid #ab8333;
+  border-left: 0.3rem solid #b91b55;
   overflow-y: hidden; }
   pre > code {
     opacity: 0.9;
@@ -245,13 +245,8 @@ pre {
 
 hr {
   border: none;
-  margin: 1rem auto;
-  background-image: url(/assets/sep.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: -10px;
-  width: 95%;
-  height: 60px; }
+  border-top: 4px solid #ECECEC;
+  margin: 4.25rem auto; }
 
 input[type='email'],
 input[type='number'],
@@ -265,7 +260,7 @@ textarea,
 select {
   appearance: none;
   background-color: transparent;
-  border: 0.1rem solid #dddddd;
+  border: 0.1rem solid #ececec;
   border-radius: 0.4rem;
   box-shadow: none;
   box-sizing: inherit;
@@ -282,7 +277,7 @@ select {
   input:not([type]):focus,
   textarea:focus,
   select:focus {
-    border-color: #ab8333;
+    border-color: #b91b55;
     outline: 0; }
 
 select {
@@ -428,7 +423,7 @@ header {
       margin-bottom: inherit;
       padding: 0 1rem; } }
 a {
-  color: #ab8333;
+  color: #b91b55;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -594,7 +589,6 @@ article p img.custom-width {
 img.image-box-shadow {
   margin-left: 10px;
   width: 90%;
-  transition: all 0.2s ease-in-out;
   filter: grayscale(0.1) brightness(0.9);
   box-shadow: -10px 10px #EEEEEE; }
 
@@ -610,8 +604,8 @@ img.image-box-shadow {
   float: right; }
 
 footer {
-  color: #dddddd;
-  border-top: 0.1rem solid #fafafa;
+  color: #cccccc;
+  border-top: 4px solid #fafafa;
   padding: 3rem 0;
   margin-top: 3rem;
   font-size: 1.5rem;
@@ -687,7 +681,8 @@ body .gist .blob-code {
   .home .box h2:hover, .home .box > a:hover {
     text-decoration: none; }
 .home .box p {
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem; }
 .home .box .box-image-frame {
   width: 100%;
   height: 250px;
@@ -737,7 +732,7 @@ body .gist .blob-code {
     object-fit: cover;
     width: 105%;
     height: 100%;
-    filter: contrast(1.3) brightness(0.9) grayscale(0.2); }
+    filter: contrast(1.3) brightness(0.9) grayscale(0.3); }
 
 #snippet {
   padding: 0 2rem; }
@@ -750,3 +745,127 @@ body .gist .blob-code {
     height: 50vh;
     width: 100%;
     overflow-y: scroll; }
+
+.wiki {
+  max-width: 120rem; }
+  .wiki a[href^="/wiki"]:hover {
+    background-color: rgba(185, 27, 85, 0.06); }
+  .wiki h1 {
+    margin-top: 2rem; }
+
+@media (max-width: 40rem) {
+  .wiki .row {
+    display: flex;
+    flex-direction: column; }
+    .wiki .row .column {
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: 100%; } }
+ul.breadcrumb {
+  display: block;
+  margin: 0; }
+  ul.breadcrumb li {
+    display: inline-block; }
+    ul.breadcrumb li::before {
+      content: "/"; }
+  ul.breadcrumb li:last-child a {
+    pointer-events: none;
+    color: #333333; }
+
+.directories {
+  margin: 0;
+  padding-top: 1.25rem;
+  border-top: 4px solid #ececec; }
+  .directories h2 {
+    font-size: 2.7rem;
+    margin: 0 0 0.75rem; }
+  .directories a[href^="/wiki"] {
+    color: #333333;
+    font-family: "Merriweather", serif;
+    max-width: 100%; }
+    .directories a[href^="/wiki"]:hover {
+      background-color: #efefef; }
+    .directories a[href^="/wiki"]::before {
+      content: "";
+      display: inline-block;
+      height: 16px;
+      width: 16px;
+      background-size: cover;
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABmJLR0QA/wD/AP+gvaeTAAABGUlEQVRoge2aQY6CQBREny70EOo95lDq7dQbjLrSswzuZxa0BrHJkNB2F6ZeUhuipF4+6QUfMMakYg5sgRNwA3575hb+swn3kGABXOkv0ZVLuFdR5qSRaUoVndQ2Umpo1lkNWpw7Sg3JMatBi6qj1JBUWQ1apJbJlc7TtXSxFHmcrpNw4RO4Al+fJAT14/cyvh2wLFiqL0tgT+R0bQuNQebOiufuP7FHbpK71UCe+k9LtXgXFlLHQupYSB0LqWMhdSykjoXUsZA6FlLHQupYSB0LqWMhdabUm7AmY3tZ36SC16XxPvJDRVbAgcg6ZcP/K7+xZA31wvUiUCbFnnV2H99i5FLRT3JmYWRH3vPtQupUwHfo/JiMUecPJ8O4EkCJoRkAAAAASUVORK5CYII=");
+      margin: 0 5px -1px 2px; }
+    .directories a[href^="/wiki"] span {
+      padding-left: 0.5rem;
+      opacity: 0.25; }
+  .directories .row .item,
+  .directories .row .none {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    padding: 0 0 0 1rem; }
+  .directories .row .none {
+    font-style: italic;
+    opacity: 0.4; }
+  .directories .row .item + .none {
+    display: none; }
+
+.preview.tooltip, .preview.tooltip-iframe {
+  pointer-events: none; }
+.preview.tooltip-iframe {
+  display: none;
+  height: 0;
+  width: 0; }
+.preview.tooltip {
+  pointer-events: none;
+  opacity: 0;
+  margin-top: 1rem;
+  background: #ffffff;
+  padding: 1em;
+  overflow: hidden;
+  position: fixed;
+  border: 1px solid #eeeeee;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: opacity 100ms, margin 100ms;
+  transform: translateZ(0);
+  z-index: 1;
+  filter: grayscale(0.9);
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0; }
+  .preview.tooltip::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), white 90%);
+    width: 100%;
+    height: 50px; }
+  .preview.tooltip.enabled {
+    width: 350px;
+    height: 225px;
+    opacity: 1;
+    margin-top: 0; }
+  .preview.tooltip > div {
+    zoom: 0.7; }
+  .preview.tooltip h1, .preview.tooltip h2, .preview.tooltip h3, .preview.tooltip h4, .preview.tooltip h5, .preview.tooltip h6 {
+    margin: 1rem 0; }
+  .preview.tooltip h1 {
+    font-size: 3rem; }
+  .preview.tooltip h2 {
+    font-size: 2.85rem; }
+  .preview.tooltip h3 {
+    font-size: 2.7rem; }
+  .preview.tooltip h4 {
+    font-size: 2.5rem; }
+  .preview.tooltip h5 {
+    font-size: 2.35rem; }
+  .preview.tooltip h6 {
+    font-size: 2.1rem; }
+  .preview.tooltip .title {
+    zoom: 1.4;
+    font-weight: bold;
+    margin-bottom: 0.5rem; }
