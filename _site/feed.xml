@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-09T18:02:40-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eder Ignatowicz</title><subtitle>Eder Ignatowicz's Personal blog 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-09T18:11:01-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eder Ignatowicz</title><subtitle>Eder Ignatowicz's Personal blog 
 </subtitle><author><name>Eder Ignatowicz</name></author><entry><title type="html">Kogito Tooling 0.8.3 Released!</title><link href="http://localhost:4000/2021/02/09/kogito-tooling-083-release.html" rel="alternate" type="text/html" title="Kogito Tooling 0.8.3 Released!" /><published>2021-02-09T00:00:00-05:00</published><updated>2021-02-09T00:00:00-05:00</updated><id>http://localhost:4000/2021/02/09/kogito-tooling-083-release</id><content type="html" xml:base="http://localhost:4000/2021/02/09/kogito-tooling-083-release.html">&lt;p&gt;We have just launched a fresh new Kogito Tooling release! 🎉&lt;/p&gt;
 
 &lt;p&gt;On the 0.8.3 &lt;a href=&quot;https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.3&quot;&gt;release&lt;/a&gt;, we made a lot of improvements and bug fixes. This post will give a quick overview of this release, and also add some highlights of our &lt;a href=&quot;https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.2&quot;&gt;0.8.2&lt;/a&gt; and &lt;a href=&quot;https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.3&quot;&gt;0.8.1&lt;/a&gt; releases. I hope you enjoy it!&lt;/p&gt;
@@ -80,7 +80,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5HSdDQzG0wE&amp;amp;t=1s&amp;amp;ab_channel=KIE&quot;&gt;KieLive#24&lt;/a&gt;  DMN: squeeze the most out of these features, by Matteo;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hY_eERFX_DQ&amp;amp;ab_channel=KIE&quot;&gt;KieLive#23&lt;/a&gt;  Kogito + Quarkus: the Marriage Made on a Cloud, by Edoardo&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hY_eERFX_DQ&amp;amp;ab_channel=KIE&quot;&gt;KieLive#23&lt;/a&gt;  Kogito + Quarkus: the Marriage Made on a Cloud, by Edoardo;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ENKHGBMDaCM&amp;amp;ab_channel=KIE&quot;&gt;KieLive#22&lt;/a&gt; OptaPlanner Shadow Variables for the Vehicle Routing Problem and Task Assignment, by Geoffrey;&lt;/li&gt;
 &lt;/ul&gt;
 
