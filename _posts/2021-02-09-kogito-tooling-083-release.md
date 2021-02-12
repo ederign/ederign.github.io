@@ -18,6 +18,8 @@ The editors are now distributed in a self-contained library that provides an all
 
 Now it's super easy to embed our editors in your applications, see this gist [example](`https://gist.githubusercontent.com/ederign/88e3ddb31c2c1374a0afc6bfede80258/raw/feb180e8f3a8ff74701cb5a5e1383f0250c8f260/dmn-standalone.js`):
 
+<script src="https://gist.github.com/ederign/88e3ddb31c2c1374a0afc6bfede80258.js"></script>
+
 [![Standalone](/assets/2021/standalone.jpg "Standalone")](/assets/2021/standalone.jpg)
 
 ## Embed your BPMN and DMN models

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://ederign.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ederign.me/" rel="alternate" type="text/html" /><updated>2021-02-12T14:06:28-05:00</updated><id>https://ederign.me/feed.xml</id><title type="html">Eder Ignatowicz</title><subtitle>Eder Ignatowicz's Personal blog 
-</subtitle><author><name>Eder Ignatowicz</name></author><entry><title type="html">Kogito Tooling 0.8.3 Released!</title><link href="https://ederign.me/2021/02/09/kogito-tooling-083-release.html" rel="alternate" type="text/html" title="Kogito Tooling 0.8.3 Released!" /><published>2021-02-09T00:00:00-05:00</published><updated>2021-02-09T00:00:00-05:00</updated><id>https://ederign.me/2021/02/09/kogito-tooling-083-release</id><content type="html" xml:base="https://ederign.me/2021/02/09/kogito-tooling-083-release.html">&lt;p&gt;We have just launched a fresh new Kogito Tooling release! 🎉&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-02-12T14:36:59-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Eder Ignatowicz</title><subtitle>Eder Ignatowicz's Personal blog 
+</subtitle><author><name>Eder Ignatowicz</name></author><entry><title type="html">Kogito Tooling 0.8.3 Released!</title><link href="http://localhost:4000/2021/02/09/kogito-tooling-083-release.html" rel="alternate" type="text/html" title="Kogito Tooling 0.8.3 Released!" /><published>2021-02-09T00:00:00-05:00</published><updated>2021-02-09T00:00:00-05:00</updated><id>http://localhost:4000/2021/02/09/kogito-tooling-083-release</id><content type="html" xml:base="http://localhost:4000/2021/02/09/kogito-tooling-083-release.html">&lt;p&gt;We have just launched a fresh new Kogito Tooling release! 🎉&lt;/p&gt;
 
 &lt;p&gt;On the 0.8.3 &lt;a href=&quot;https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.3&quot;&gt;release&lt;/a&gt;, we made a lot of improvements and bug fixes. This post will give a quick overview of this release, and also add some highlights of our &lt;a href=&quot;https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.2&quot;&gt;0.8.2&lt;/a&gt; and &lt;a href=&quot;https://github.com/kiegroup/kogito-tooling/releases/tag/0.8.3&quot;&gt;0.8.1&lt;/a&gt; releases. I hope you enjoy it!&lt;/p&gt;
 
@@ -12,6 +12,8 @@
 &lt;p&gt;The editors are now distributed in a self-contained library that provides an all-in-one JavaScript file for each of them that can be interacted with using a comprehensive API for setup and control it.&lt;/p&gt;
 
 &lt;p&gt;Now it’s super easy to embed our editors in your applications, see this gist &lt;a href=&quot;`https://gist.githubusercontent.com/ederign/88e3ddb31c2c1374a0afc6bfede80258/raw/feb180e8f3a8ff74701cb5a5e1383f0250c8f260/dmn-standalone.js`&quot;&gt;example&lt;/a&gt;:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ederign/88e3ddb31c2c1374a0afc6bfede80258.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;a href=&quot;/assets/2021/standalone.jpg&quot;&gt;&lt;img src=&quot;/assets/2021/standalone.jpg&quot; alt=&quot;Standalone&quot; title=&quot;Standalone&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
@@ -88,4 +90,186 @@
 
 &lt;h2 id=&quot;thank-you-to-everyone-involved&quot;&gt;Thank you to everyone involved!&lt;/h2&gt;
 
-&lt;p&gt;I would like to thank everyone involved with this release, from the excellent KIE Tooling Engineers to the lifesavers QEs and the UX people that help us look awesome!&lt;/p&gt;</content><author><name>Eder Ignatowicz</name></author><summary type="html">We have just launched a fresh new Kogito Tooling release! 🎉</summary></entry></feed>
+&lt;p&gt;I would like to thank everyone involved with this release, from the excellent KIE Tooling Engineers to the lifesavers QEs and the UX people that help us look awesome!&lt;/p&gt;</content><author><name>Eder Ignatowicz</name></author><summary type="html">We have just launched a fresh new Kogito Tooling release! 🎉</summary></entry><entry><title type="html">5 Pillars of a Successful Java Web Application</title><link href="http://localhost:4000/2018/09/02/5-pillars-of-successful-java-web-application.html" rel="alternate" type="text/html" title="5 Pillars of a Successful Java Web Application" /><published>2018-09-02T01:00:00-04:00</published><updated>2018-09-02T01:00:00-04:00</updated><id>http://localhost:4000/2018/09/02/5-pillars-of-successful-java-web-application</id><content type="html" xml:base="http://localhost:4000/2018/09/02/5-pillars-of-successful-java-web-application.html">&lt;p&gt;&lt;a href=&quot;https://twitter.com/porcelli&quot;&gt;Alex Porcelli&lt;/a&gt; and I had the opportunity to present at JavaOne San Francisco 2017 two talks related to our work: &lt;a href=&quot;https://speakerdeck.com/ederign/5-pillars-of-a-successful-java-web-application-1&quot;&gt;“5 Pillars of a Successful Java Web Application&lt;/a&gt;” and &lt;a href=&quot;https://speakerdeck.com/ederign/the-hidden-secret-of-java-open-source-projects&quot;&gt;The Hidden Secret of Java Open Source Projects&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/j1audience.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/j1audience.jpg&quot; alt=&quot;Java One Audience&quot; title=&quot;Java One Audience&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It was great to share our cumulative experience over the years building the workbench and the web tooling for the Drools and jBPM platform and both talks had great attendance (250+ people in the room).&lt;/p&gt;
+
+&lt;p&gt;In this post, we’ll detail our “5 Pillars of a Successful Java Web Application”, trying to give you an overview of our research and a taste of participating in a great event like Java One.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of challenges related to building and architecting a web application, especially if you want to keep your codebase updated with modern techniques without throwing away a lot of your code every two years in favor of the latest trendy JS framework.&lt;/p&gt;
+
+&lt;p&gt;In our team we are able to successfully keep a 7+ year old Java application up-to-date, combining modern techniques with a legacy codebase of more than 1 million LOC, with an agile, sustainable, and evolutionary web approach.&lt;/p&gt;
+
+&lt;p&gt;More than just choosing and applying any web framework as the foundation of our web application, we based our web application architecture on 5 architectural pillars that proved crucial for our platform’s success. Let’s talk about them:&lt;/p&gt;
+
+&lt;h1 id=&quot;1st-pillar-large-scale-applications&quot;&gt;1st Pillar: Large Scale Applications&lt;/h1&gt;
+
+&lt;p&gt;=The first pillar is that every web application architecture should be concerned about the potential of becoming a long-lived and mission-critical application, or in other words, a large-scale application.= Even if your web application is not exactly big like ours (1mi+ lines of web code, 150 sub-projects, +7 years old) you should be concerned about the possibility that your small web app will become a big and important codebase for your business. What if your startup becomes an overnight success? What if your enterprise application needs to integrate with several external systems?&lt;/p&gt;
+
+&lt;p&gt;Every web application should be built as a large-scale application because it is part of a distributed system and it is hard to anticipate what will happen to your application and company in two to five years.&lt;/p&gt;
+
+&lt;p&gt;And for us, a critical tool for building these kinds of distributed and large-scale applications throughout the years has been &lt;strong&gt;static typing&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;static-typing&quot;&gt;Static Typing&lt;/h2&gt;
+
+&lt;p&gt;The debate of static vs. dynamic typing is very controversial. People who advocate in favor of dynamic typing usually argue that it makes the developer’s job easier. This is true for certain problems.&lt;/p&gt;
+
+&lt;p&gt;However, static typing and a strong type system, among other advantages, simplify identifying errors that can generate failures in production and, especially for large-scale systems, make &lt;strong&gt;refactoring&lt;/strong&gt; more effective.&lt;/p&gt;
+
+&lt;p&gt;Every application demands constant refactoring and cleaning. It’s a natural need. For large-scale ones, with codebases spread across multiple modules/projects, this task is even more complex. The confidence when refactoring is related to two factors: test coverage and the tooling that only a static type system is able to provide.&lt;/p&gt;
+
+&lt;p&gt;For instance, we need a static type system in order to find all usages of a method, in order to extract classes, and most importantly to figure out at &lt;strong&gt;compile time&lt;/strong&gt; if we accidentally broke something.&lt;/p&gt;
+
+&lt;p&gt;But we are in web development and JavaScript is the language of the web. How can we have static typing in order to refactor effectively in the browser?&lt;/p&gt;
+
+&lt;h1 id=&quot;using-a-transpiler&quot;&gt;Using a transpiler&lt;/h1&gt;
+
+&lt;p&gt;A transpiler is a type of compiler that takes the source code of a program written in one programming language as its input and produces equivalent source code in another programming language.&lt;/p&gt;
+
+&lt;p&gt;This is a well-known Computer Science problem and there are a &lt;a href=&quot;https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js&quot;&gt;lot&lt;/a&gt; of transpilers that output JavaScript. In a sense, JavaScript is the assembly of the web: the common ground across all the web ecosystems. We, as engineers, need to figure out what is the best approach to deal with JavaScript’s dynamic nature.&lt;/p&gt;
+
+&lt;p&gt;A Java transpiler, for instance, takes the Java code and transpiles it to JavaScript at compile time. So we have all the advantages of a statically-typed language, and its tooling, targeting the browser.&lt;/p&gt;
+
+&lt;h1 id=&quot;java-to-javascript-transpilation&quot;&gt;Java-to-JavaScript Transpilation&lt;/h1&gt;
+
+&lt;p&gt;The transpiler that we use in our architecture, is GWT. This choice is a bit controversial, especially because the GWT framework was launched in 2006, when the web was a very different place.&lt;/p&gt;
+
+&lt;p&gt;But keep in mind that every piece of technology has its own good parts and bad parts. For sure there are some bad parts in GWT (like the Swing Style Widgets, multiple permutations per browser/language), but keep in mind that for our architecture what we are trying to achieve is static typing on the web, and for this purpose the GWT compiler is &lt;strong&gt;amazing&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our group is part of GWT steering committee, and the next generation of GWT is all about JUST these good parts. Basically removing or decoupling the early 2000 legacy and keeping only the good parts. In our opinion the best parts of GWT are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Java to JavaScript transpiler:&lt;/strong&gt; extreme JavaScript performance due to compiling optimizations and static typing in the web;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;*java.&lt;/em&gt; emulation: **excellent emulation of the main java libraries, providing runtime behavior/consistency;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://speakerdeck.com/ederign/5-pillars-of-a-successful-java-web-application-1?slide=31&quot;&gt;&lt;strong&gt;JS Interop&lt;/strong&gt;&lt;/a&gt;**: **almost transparent interoperability between Java &amp;lt;-&amp;gt; Javascript. This is a key aspect of the next generation of GWT and the Drools/jBPM platform: embrace and interop (two way) with JS ecosystem.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Google is currently working on a new transpiler called J2CL (short for Java-to-Closure, using the Google Closure Compiler) that will be the compiler used in GWT 3, the next major GWT release. The J2CL transpiler has a different architecture and scope, allowing it to overcome many of the disadvantages of the previous GWT 2 compiler.&lt;/p&gt;
+
+&lt;p&gt;Whereas the GWT 2 compiler must load the entire AST of all sources (including dependencies), J2CL is not a monolithic compiler. Much like javac, it is able to individually compile source files, using class files to resolve external dependencies, leaving greater potential for incremental compilation.&lt;/p&gt;
+
+&lt;p&gt;These three good parts are great and in our opinion, you should really consider using GWT as a transpiler in your web applications. But keep in mind that the most important point here is that GWT is just &lt;strong&gt;our&lt;/strong&gt; first pillar implementation. You can consider using other transpilers like Typescript, Dart, Elm, ScalaJS, PureScript, or TeaVM.&lt;/p&gt;
+
+&lt;p&gt;The key point is that every web application should be handled as a large-scale application, and every large-scale application should be concerned about effective refactoring. The best way to achieve this is using statically typed languages.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;2nd-pillar-full-stack-developers&quot;&gt;2nd Pillar: Full stack Developers&lt;/h1&gt;
+
+&lt;p&gt;The second pillar of every successful web application is related to developers’ skill sets: we should embrace the full stack. Your company may still differentiate backend and front-end developers, but gradually this border will vanish because in the end, we’re developers and developers should solve problems. Doesn’t matter if the problem is located on the server or in the browser because they are just problem-solving media.&lt;/p&gt;
+
+&lt;p&gt;The most efficient way to work in this full stack environment is to use the same programming model for backend and front-end. On our team, we embrace the Java EE programming model (and certainly we’re going to be a big player in the upcoming EE4J), but how are we able to share the same Java EE programming model in the browser?&lt;/p&gt;
+
+&lt;p&gt;For this we use the &lt;a href=&quot;http://erraiframework.org/&quot;&gt;Errai&lt;/a&gt; project. Leveraging the GWT compiler, Errai enables you to reuse existing Java EE (Eclipse EE) code on the client. With Errai, you can have dependency injection on your client-side code, observe and fire CDI events on the client, and exchange events between the client and server.&lt;/p&gt;
+
+&lt;p&gt;Having the same programming model among all the layers of our application, makes it evolve faster and safer, and especially, reduces the context switching between backend and frontend programming models. Learn all about Errai’s Java EE features &lt;a href=&quot;https://github.com/errai/errai-tutorial&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;3rd-pillar-ux-integration&quot;&gt;3rd Pillar: UX Integration&lt;/h1&gt;
+
+&lt;p&gt;The next pillar for a successful web application is facilitating integration with your UX team. Your UX team is the one with the proper knowledge to build easily usable and visually attractive user interfaces. It’s not an engineering only job: these are different skillsets that have to work together to succeed.&lt;/p&gt;
+
+&lt;p&gt;Mixing HTML/CSS and control logic language is a mistake. We learned this in the hard way with the pain to maintain JSP pages.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, nowadays many JS frameworks are going to the same path:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/ederign/e9013bf9755dc81ccfa0b1aad85a6b5e.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;How can a UX expert work on this code? What is the impedance of having a programmer “translating HTML/CSS” into this framework specificities? Our industry keeps forcing UX to understand and interact with framework-specific code.&lt;/p&gt;
+
+&lt;p&gt;The 3rd pillar is that your web applications should respect and keep HTML and CSS as clean as possible. This is the only way to have a seamless integration between UX and engineers. But how to achieve this?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://docs.jboss.org/errai/latest/errai/reference/html_single/#sid-51806600&quot;&gt;Errai&lt;/a&gt; provides a pure HTML/CSS template based framework. With annotation processors, we bind transparently HTML tags to DOM Elements in java code, without introducing ANY change to HTML/CSS structure. With Errai UI, we do not mix and matches business logic with HTML/CSS&lt;/p&gt;
+
+&lt;p&gt;This is helpful for the Drools and jBPM teams because it allows a noiseless integration between the UX team and engineering. So the third pillar of a web application is to work closely with UX team and the only way to do this effectively is to leave the HTML and CSS as clean as possible.&lt;/p&gt;
+
+&lt;p&gt;This is the second of three posts about our 5 pillars of successful web applications. Stay tuned for the next one.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;4th-pillar-510-year-life-span&quot;&gt;4th Pillar: 5~10 year Life-Span&lt;/h1&gt;
+
+&lt;p&gt;The next pillar is how to make my web application last for more than 5~10 years. What’s the expected lifespan of your backend? Probably you don’t plan to throw it away in 2 years.&lt;/p&gt;
+
+&lt;p&gt;However, if you talk with some front-end engineers they answer will be slightly different and surprising. Some people said that you should expect to throw away your front-end code every two years, due to the evolution of JavaScript frameworks. Really? Should I rewrite the business logic of my front-end application every two years?&lt;/p&gt;
+
+&lt;p&gt;Making an application last is a well-known architecture challenge. Several architectural models share similar principles, i.e., Hexagonal Architecture by Alistair Cockburn, Onion Architecture by Jeffrey Palermo, Clean Architecture by Robert C. Martin. These principles are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Decoupled from Frameworks&lt;/li&gt;
+  &lt;li&gt;Testable&lt;/li&gt;
+  &lt;li&gt;Decoupled from UI&lt;/li&gt;
+  &lt;li&gt;Decoupled from Database&lt;/li&gt;
+  &lt;li&gt;Independent of external systems&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In order to illustrate these principles, look on the following &lt;a href=&quot;https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html&quot;&gt;Clean Architecture&lt;/a&gt; diagram:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/cleanarchitecture.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/cleanarchitecture.jpg&quot; alt=&quot;Clean Architecture&quot; title=&quot;Clean Architecture&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The entities and the uses cases should be should be protected from any external agent. This means that an external modification in a UI should never affect them. The real value of our applications is the business rules and the core logic that should be stable and only changed when a business changes.&lt;/p&gt;
+
+&lt;p&gt;The importance of this principle is clear to the backend developers. For instance, on AppFormer, we have a virtual file system API, it defines the contract for I/O operations.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/appformervsf.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/appformervsf.jpg&quot; alt=&quot;AppFormer VFS&quot; title=&quot;AppFormer VFS&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This API is a NIO2 wrapper for I/O operations on the regular file system, or in distributed environments can be switched for a distributed GIT NIO2 backport. In that way, we can move from a simple file store to a distributed git backend without having to change any use case. How? Because we protected our use cases with a Virtual File System interface.&lt;/p&gt;
+
+&lt;p&gt;For backend developers, this is not new. It’s how we currently implement most of our backend architectures.&lt;/p&gt;
+
+&lt;p&gt;However, as industry, when we are architecting a front-end application do we have similar care? Or we just evaluate and adopt web frameworks and follow his model? Aren’t we relying on JS frameworks to define our web architectures?&lt;/p&gt;
+
+&lt;p&gt;The problem with that approach is that we need to decide the JS framework on the first day of the project. But the reality is that this will have to last to support business as long as business needs.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/curve.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/curve.jpg&quot; alt=&quot;Curve&quot; title=&quot;AppFormer VFS&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;But there is a caveat on this approach. There is a good chance that between 2nd and 4th year of JS framework of the day, the project will be canceled or will be replaced by a new version incompatible with the current one. Similar to the Angular 1.x and 2 &lt;a href=&quot;https://toddmotto.com/future-of-angular-1-x&quot;&gt;stor&lt;/a&gt;ies.&lt;/p&gt;
+
+&lt;p&gt;So what do we do? Do we rewrite the entire client code? Why do we think it’s ok to do this? And what is the risk of remaining in the old version? And the updates? How can I found resources to work with outdated tech? What about security risks? &lt;a href=&quot;https://thehackernews.com/2017/09/equifax-apache-struts.html&quot;&gt;Data breaches &lt;/a&gt;for instance.&lt;/p&gt;
+
+&lt;p&gt;Robert C. Martin said that a good architecture allows volatile decisions to be easily changed. What if we dealt with the volatility of JS frameworks as a fact?&lt;/p&gt;
+
+&lt;p&gt;Our implementation for this problem is part of the Appformer project that Alex Porcelli and I are the leaders.&lt;/p&gt;
+
+&lt;p&gt;AppFormer (previously know as Uberfire) is the web-based workbench framework behind Red Hat JBoss Business Rules Management System (BRMS) and Red Hat JBoss BPM Suite (BPMS). AppFormer is also the basis for the next line of business of BRMS and BPMS platform: a low code/no code platform to develop modern business applications. Our initiative aims to allow business users easily build applications by mashing up components and connect them to other Red Hat modules and software.&lt;/p&gt;
+
+&lt;p&gt;Our main architectural goal is that nothing in our core business depends on any web framework. And how did we do this?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/afarchitecture.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/afarchitecture.jpg&quot; alt=&quot;Architecture&quot; title=&quot;AppFormer ARchitecture&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have created a programming model that has a well-defined component model based on Screen, Editors, Perspectives, and Popups. Each of these components has also a well-defined life-cycle.&lt;/p&gt;
+
+&lt;p&gt;In the user perspective, a Screen is a component. An editor is a component that is associated with a file type. A Perspective is a page.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/perspectives.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/perspectives.jpg&quot; alt=&quot;Perrspectives&quot; title=&quot;Perspectives&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is not new, it’s the old contract-based architecture. Each component is, in the end, a Java interface. And what are the advantages of this approach?&lt;/p&gt;
+
+&lt;p&gt;Do you remember that Errai has a Bean Manager in the browser? A well-defined programming model allows us to quickly switch between implementations of the component interface, instead of coupling with a specific web technology. We render the components based on the interface type and the bean name, not on the real implementation/framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/erraibean.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/erraibean.jpg&quot; alt=&quot;Errai&quot; title=&quot;Perspectives&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have legacy code, and such code were developed using old technologies, like GWT widgets, but when we modernize such implementations using pure HTML/CSS it’s just a matter of switch the implementations, because both implementations respect the same contract. That is the beauty of having a contract based model and CDI in the browser.&lt;/p&gt;
+
+&lt;p&gt;That is the how we managed to transparently run a gwt code from 7 years ago that implements the Screen interface, along with fresh code implemented in Errai UI.&lt;/p&gt;
+
+&lt;p&gt;So, this concludes the 4th pillars of successful web applications. You should prepare your architecture to live more than 2~4 years old life-cycle of JS frameworks, and in order to do that, your web architecture should be treated with the same respect as you treat your backend.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;5th-pillar-interoperability&quot;&gt;5th Pillar: Interoperability&lt;/h1&gt;
+
+&lt;p&gt;And the last, but not least, the 5th Pillar of successful web applications is interoperability. You need to be flexible in order to stay modern. As we discussed in the 4th pillar, we need to have a solid architecture, but also we cannot be stuck in old tech and need to offer interoperability to my third parties. We need to embrace the new technologies. How can we do that?&lt;/p&gt;
+
+&lt;p&gt;We saw in the last pillar, that we use Java interfaces to define our components. In order to avoid boilerplate code, we use Java Annotations Processors to automatically generate adapters from user client to our interfaces. (i.e. @&lt;a href=&quot;https://speakerdeck.com/ederign/5-pillars-of-a-successful-java-web-application-1?slide=81&quot;&gt;WorkbenchPerspectives&lt;/a&gt; annotations trigger the generation for implementation of PerspectiveActivity interface).&lt;/p&gt;
+
+&lt;p&gt;To integrate with any external web framework, a new adapter that maps to the target interface and register needs to be implemented. Its implementation takes place in the Errai Bean Manager. After this, everything will become an implementation of the same contract and transparent for the use cases. &lt;a href=&quot;https://speakerdeck.com/ederign/5-pillars-of-a-successful-java-web-application-1?slide=84&quot;&gt;Here&lt;/a&gt; is an example of how we already do this with Angular code.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/2018/errailookup.jpg&quot;&gt;&lt;img src=&quot;/assets/2018/errailookup.jpg&quot; alt=&quot;Errai&quot; title=&quot;Errai Lookup&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In this post we’ve presented the 5 pillars that we believe that are the foundation of every successful web application. Each of them, has already proved its value in practice in the development of Drools and jBPM workbenches.&lt;/p&gt;
+
+&lt;p&gt;Web applications are important pieces of our architecture. Although your application may not implement all these 5 pillars, you should keep them always in mind, because we really believe that all those 5 pillars provide a solid foundation for any web application.&lt;/p&gt;</content><author><name>Eder Ignatowicz</name></author><summary type="html">Alex Porcelli and I had the opportunity to present at JavaOne San Francisco 2017 two talks related to our work: “5 Pillars of a Successful Java Web Application” and The Hidden Secret of Java Open Source Projects.</summary></entry></feed>

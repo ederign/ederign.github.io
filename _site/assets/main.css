@@ -449,11 +449,13 @@ ul {
 ol {
   list-style: decimal inside; }
 
-ul {
-  list-style: square; }
-  @media (max-width: 55rem) {
-    ul {
-      padding-left: 2rem; } }
+ul li {
+  padding-left: 2rem;
+  position: relative; }
+  ul li:before {
+    position: absolute;
+    content: "-";
+    left: 0; }
 
 .button,
 button,
@@ -576,6 +578,14 @@ h6 {
   padding: 0.5rem 1rem;
   opacity: 1; }
 
+@media (max-width: 40rem) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    zoom: 0.8; } }
 img {
   max-width: 100%; }
 
@@ -747,7 +757,11 @@ body .gist .blob-code {
     overflow-y: scroll; }
 
 .wiki {
-  max-width: 120rem; }
+  max-width: 100rem; }
+  .wiki, .wiki a, .wiki p, .wiki ul, .wiki ul li {
+    font-family: "Inconsolata", monospace;
+    line-height: 3rem;
+    font-size: 2rem; }
   .wiki a[href^="/wiki"]:hover {
     background-color: rgba(185, 27, 85, 0.06); }
   .wiki h1 {
@@ -764,17 +778,25 @@ body .gist .blob-code {
       width: 100%; } }
 ul.breadcrumb {
   display: block;
-  margin: 0; }
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; }
   ul.breadcrumb li {
-    display: inline-block; }
+    display: inline-block;
+    padding-left: 0;
+    margin-left: 0; }
     ul.breadcrumb li::before {
-      content: "/"; }
+      content: "/";
+      position: relative; }
   ul.breadcrumb li:last-child a {
     pointer-events: none;
     color: #333333; }
 
 .directories {
-  margin: 0;
+  margin: 4rem 0 0 0;
   padding-top: 1.25rem;
   border-top: 4px solid #ececec; }
   .directories h2 {
@@ -782,10 +804,10 @@ ul.breadcrumb {
     margin: 0 0 0.75rem; }
   .directories a[href^="/wiki"] {
     color: #333333;
-    font-family: "Merriweather", serif;
     max-width: 100%; }
     .directories a[href^="/wiki"]:hover {
-      background-color: #efefef; }
+      background-color: #efefef;
+      text-decoration: none; }
     .directories a[href^="/wiki"]::before {
       content: "";
       display: inline-block;
@@ -803,8 +825,7 @@ ul.breadcrumb {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 1.7rem;
-    margin-bottom: 0.5rem;
-    padding: 0 0 0 1rem; }
+    margin-bottom: 0.5rem; }
   .directories .row .none {
     font-style: italic;
     opacity: 0.4; }
@@ -851,6 +872,10 @@ ul.breadcrumb {
     margin-top: 0; }
   .preview.tooltip > div {
     zoom: 0.7; }
+  .preview.tooltip a, .preview.tooltip p {
+    font-family: "Inconsolata", monospace;
+    line-height: 3rem;
+    font-size: 2rem; }
   .preview.tooltip h1, .preview.tooltip h2, .preview.tooltip h3, .preview.tooltip h4, .preview.tooltip h5, .preview.tooltip h6 {
     margin: 1rem 0; }
   .preview.tooltip h1 {
