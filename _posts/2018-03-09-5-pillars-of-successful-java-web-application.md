@@ -20,7 +20,7 @@ More than just choosing and applying any web framework as the foundation of our 
 
 # 1st Pillar: Large Scale Applications
 
-=The first pillar is that every web application architecture should be concerned about the potential of becoming a long-lived and mission-critical application, or in other words, a large-scale application.= Even if your web application is not exactly big like ours (1mi+ lines of web code, 150 sub-projects, +7 years old) you should be concerned about the possibility that your small web app will become a big and important codebase for your business. What if your startup becomes an overnight success? What if your enterprise application needs to integrate with several external systems?
+The first pillar is that every web application architecture should be concerned about the potential of becoming a long-lived and mission-critical application, or in other words, a large-scale application.= Even if your web application is not exactly big like ours (1mi+ lines of web code, 150 sub-projects, +7 years old) you should be concerned about the possibility that your small web app will become a big and important codebase for your business. What if your startup becomes an overnight success? What if your enterprise application needs to integrate with several external systems?
 
 Every web application should be built as a large-scale application because it is part of a distributed system and it is hard to anticipate what will happen to your application and company in two to five years.
 
