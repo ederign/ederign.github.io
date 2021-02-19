@@ -25,14 +25,14 @@ Go to the Extensions menu and search for "Red Hat Business Automation Bundle".  
 
 [![Install Extension](/assets/2021/codespaces2.gif "Install Extension")](/assets/2021/codespaces2.gif)
 
-### 3-) Author your BPMN and DMN access
+### 3-) Author your BPMN and DMN assets
 
 You are now ready to author your BPMN and DMN assets as any other VS Code asset.
 
-[![Author](/assets/2021/codespace3.gif "Author")](/assets/2021/codespace3.gif)
+[![Author](/assets/2021/codespaces3.gif "Author")](/assets/2021/codespaces3.gif)
 
 You can also drag and drop any file of your computer into Codespaces, making it super easy to import the assets that you created on [dmn.new](https://dmn.new) and [bpmn.new](https://bpmn.new).
 
 [![Author](/assets/2021/codespaces4.gif "Author")](/assets/2021/codespaces4.gif)
 
-That's it! Thanks for reading and I hope you like it. Let's develop our Business Automation Assets on the cloud.
+That's it! Thanks for reading and I hope you like it. Let's develop our Business Automation Assets in the cloud.
