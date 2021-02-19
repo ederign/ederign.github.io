@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[KIE] 3 steps to author BPMN, DMN editors on GitHub Codespaces"
+title:  "3 steps to author BPMN, DMN editors on GitHub Codespaces"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2021-02-19 00:00:00 -0500
 ---
