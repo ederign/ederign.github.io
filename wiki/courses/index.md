@@ -1,7 +1,5 @@
 ---
 layout: wiki
 title: Courses
-last_updated: 2021-01-17
 ---
-
-// TODO: Init the courses page.
+Some raw notes of courses that I'm currently taking or took at some point in the past.

@@ -1,1 +1,11 @@
-.history/
+.history
+# IDE
+.idea
+.vscode
+
+# Misc
+_site
+.sass-cache
+.jekyll-metadata
+.DS_Store
+
