@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "3 steps to author BPMN, DMN editors on GitHub Codespaces"
+title:  "3 steps to author BPMN, DMN assets on GitHub Codespaces"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2021-02-19 00:00:00 -0500
 ---
@@ -35,6 +35,4 @@ You can also drag and drop any file of your computer into Codespaces, making it 
 
 [![Author](/assets/2021/codespaces4.gif "Author")](/assets/2021/codespaces4.gif)
 
-That's it! Thanks for reading and I hope you like it. Let's develop our Business Automation Assets in the cloud.
-
-[kie]
+That's it! Thanks for reading and I hope you like it. Let's develop our Business Automation Assets in the cloud. [kie]
