@@ -7,7 +7,7 @@ last_updated: 2021-02-21
 
 "The big ideas behind reliable, scalable, and maintainable systems."
 
-Author: Martin Kleppmann [twitter](https://twitter.com/martinkl) [amazon](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=asc_df_1449373321/?tag=hyprod-20&linkCode=df0&hvadid=266396064900&hvpos=&hvnetw=g&hvrand=5979872090983378800&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9001999&hvtargid=pla-432535594773&psc=1)
+Author: Martin Kleppmann [twitter](https://twitter.com/martinkl) [amazon](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=sr_1_1?dchild=1&keywords=Designing+Data-Intensive+Applications%3A+The+Big+Ideas+Behind+Reliable%2C+Scalable%2C+and+Maintainable+Systems&qid=1613920056&sr=8-1)
 
 [![Book cover](/assets/2021/wiki/design-data-cover.jpg "Book cover")](/assets/2021/wiki/design-data-cover.jpg)
 
