@@ -3,8 +3,6 @@ layout: wiki
 title: Designing Data-Intensive Applications
 last_updated: 2021-02-21
 ---
-
-
 "The big ideas behind reliable, scalable, and maintainable systems."
 
 Author: Martin Kleppmann [twitter](https://twitter.com/martinkl) [amazon](https://www.amazon.com/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321/ref=sr_1_1?dchild=1&keywords=Designing+Data-Intensive+Applications%3A+The+Big+Ideas+Behind+Reliable%2C+Scalable%2C+and+Maintainable+Systems&qid=1613920056&sr=8-1)
@@ -49,7 +47,7 @@ Data models have a profound effect on systems, not only on how it is written but
   - Document and graph databases usually don't enforce a schema (easier to adapt for new requirements, but the application still assumes that the data has a certain structure
     - schema explicit (enforced on write) or implicit (assume on reading)
 
-### Chapter 3: Storage and Retrieval
+## Chapter 3: Storage and Retrieval
 
 A database needs to do two things: when you give it data, it should store it; and when you ask it again later, it should give it back to you.
 
@@ -89,4 +87,95 @@ OLTPs (transaction processing) has two schools of though:
 1. **Log-structure school**, which only permits appending to files and deleting obsolete files but never update a file that has been written. (Cassandra, LSM-trees, Lucene)
 2. Update-in-place school, which treats the disk as a set of fixed-size pages that can be overwritten. B trees are the bigger example of this (being used on all major relational DB)
 
-### Chapter 4: TODO
+## Chapter 4:  Encoding and Evolution
+
+Evolvability: we should aim to build systems that make it easy to adapt to change. We should focus on encoding on the efficiency perspective and architectural options to evolve them (schemas).
+
+Most of the changes require changes also to data in stores, two ways of coping with that:
+
+- Relational databases: schemas assume all data conforms to one schema, which can be changed (via scheme migrations)
+- Schema on read ('schemaless/document"): don't enforce a schema and can contain a mixture of anolder and newer format written in different times (versions of the app).
+
+When a schema changes, we probably need also to change the application code. In large applications, this cannot happen instantaneously, on:
+
+- Server-side applications: rolling upgrade (staged rollout), deploying this new app to few nodes at a time (to check if everything is correct);
+  - No downtime in theory;
+- Client-Side: user should update his applications;
+
+We must assume that different nodes/clients are running different schemas. All data flowing in the system should be encoded in a way that provides backward compatibility (new code read old data) and forward (old code read new data)
+
+So, newer and older versions of the code should coexist in a system, achievable by a guarantee of compatibility in both directions:
+
+- Backwardcompatibility: new code can read data that was written by older code. (should be easy because new code knows the format of data)
+- Forward compatibility: older code can read data written by newer code. (harder to achieve, requires old code to be able to ignore new data by new version and adapt to changes in the encoding)
+
+**Formats to encoding data**
+
+Programs usually works with two representations of data.
+
+- In memory (cpu efficient): objects, arrays, structs, lists etc;
+- When  you want to send it over the network (you need  to convert it to a sequence of bytes)
+
+Translating between representations is called *encoding* (used in the book), *serialization* or *marshalling*; and the reverse is called *decoding*, *parsing*, *deserialization* or *unmarshalling*.
+
+**Language-Specific formats**
+
+Only use language-specific encoding for transient purposes because they have some issues:
+
+- Encoding tied to a programming language (i.e. java serialization)
+- To restore the data, the decoder needs to instantiate arbitrary classes (security issue)
+- Not all language formats are efficient (i.e. java built in serialization)
+
+**JSON, XML & Binary Variants**
+
+Textual formats, "human-readable", but with some caveats:
+
+- Ambiguity about numbers representation;
+- Lack of support for binary strings (if you use base-64-encoded it will increase the data size by 33%
+- Optional schema support for XML, JSON and no schema support for CSV.
+- Use a lot of spaces comparing to bynary formats;
+
+**Apache Thrift and Protocol Buffers***
+
+Both are binary encoding libraries that requires a schema for any data encode, i.e. in Protocol Buffer:
+
+```
+message Person {
+	required string user_name = 1;
+	optional int64 favourite_number = 2;
+	repeated string interests = 3;
+}
+```
+
+They both come with a code generation tool, that produces classes (encode/decode) in many languages.
+
+**Field tags and schema evolution**
+
+Schema changes related to field names can be easily done if you maintain code tags (keeping forward compatibility), but changing datatypes of fields are risky (check details on framework docs).
+
+*Apache Avro* is another option for binary encoding format. How it does schema evolution?
+
+When an app wants to encode data, it does with whatever schema it knows (writer's schema).
+
+When an app wants to decode some data, it's expected that the data is on some scheme (reader schema).
+
+The idea of Avro is that reader/writer schema doesn't have to be the same; they only need to be compatible. Avro library resolves the difference and tries to translate the data. (in the Avro docs, there are more details of how this evolution works), but as an example:
+
+[![Schema Migration](/assets/2021/wiki/avroSchemaConverstion.png "Avro migration")](/assets/2021/wiki/avroSchemaConverstion.png)
+
+Forward/backward compatibility is possible but with some caveats, i.e. adding/removing fields that only have default values and changing the name of the field would require alias usage.
+
+Compared with Protocol Buffers and Thrift, Avro is more friendly to dynamically generate schemas. In most cases, you can automatically generate reader/writer schemas (for protbuff and thrift you need to add tags manually).
+
+** Models of Dataflow**
+
+Different scenarios where data encodings are important:
+
+- Throughdatabases:  where the process writing to the database encodes the data and the process reading it decodes it;
+- RPC and REST, where the client encodes a request, the server decodes the request and encodes a response, and the client finally decodes the response
+- Async message passing (brokers or actors): msgs needs to be encoded by the sender and decoded by recipient.
+
+
+## Part 2: Foundations of Data Systems
+
+### Chapter X: TBD

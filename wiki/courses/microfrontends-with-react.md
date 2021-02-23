@@ -9,7 +9,7 @@ Code lives [here](https://github.com/ederign/experiments/tree/master/federated_m
 
 ### Section 1: The Basics of Microfrontends
 
-What are microfrontends?
+What are micro frontends?
 
 - Divide a monolithic app into multiple, smaller apps
 - Each smaller app is responsible for a distinct feature of the product
@@ -25,22 +25,22 @@ Ideally, a MFE should not talk between each other, but with some sort of backend
 
 Types of integration
 
-- *Build-Time integration* (compile-time integration): Before container gets loaded in the browser, it get access to ProductsList source code;
+- *Build-Time integration* (compile-time integration): Before the container gets loaded in the browser, it gets access to ProductsList source code;
   - Pros: Easy to setup and understand
-  - Cons: Container has to be re-deployed every time ProductsList is updated and tempting to tightly couple Container + ProductsList together;
+  - Cons: Container has to be re-deployed every time ProductsList has updated and tempting to tightly couple Container + ProductsList together;
 
 [![Buiild-Time](/assets/2021/wiki/mf2.png "Build time")](/assets/2021/wiki/mf2.png)
 
-- *Run-Time integration* (client-side integration): After container gets loaded in the browser, it gets access to ProductsList source code;
+- *Run-Time integration* (client-side integration): After the container gets loaded in the browser, it gets access to ProductsList source code;
 
-  - Pros: ProductsList can be deployed independently at any time and different versions of ProductsList can be deployed and Container can decide which one to use
+  - Pros: ProductsList can be deployed independently at any time and can deploy different versions of ProductsList, and Container can decide which one to use
   - Cons: tooling + setup is far more complicated
   - Example of this integration is Webpack Module Federation
     - most flexible and performant solution around right now
   - [![Run-Time](/assets/2021/wiki/mf3.png "Run time")](/assets/2021/wiki/mf3.png)
 - *Server Integration*: while sending down JS to load up Container, a server decides on whether or not to include ProductsList source
 
-Webpack combine many js files (from project and dependencies) into one single file.
+Webpack combines many js files (from project and dependencies) into one single file.
 
 ### Section 2: The Basics of Module Federation
 
@@ -73,8 +73,10 @@ Products(Remote):
 
 [![Products configuration](/assets/2021/wiki/mf9.png "Products Configuration")](/assets/2021/wiki/mf9.png)
 
-#### The development Process
+#### The Development Process
 
 [![Process](/assets/2021/wiki/mf10.png "Process")](/assets/2021/wiki/mf10.png)
 
 index.html of Products and cart are only used during developments of subprojects.
+
+index.html of Container is used during development + production
