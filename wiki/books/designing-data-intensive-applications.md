@@ -171,11 +171,11 @@ Compared with Protocol Buffers and Thrift, Avro is more friendly to dynamically 
 
 Different scenarios where data encodings are important:
 
-- Throughdatabases:  where the process writing to the database encodes the data and the process reading it decodes it;
+- Through databases:  where the process writing to the database encodes the data and the process reading it decodes it;
 - RPC and REST, where the client encodes a request, the server decodes the request and encodes a response, and the client finally decodes the response
 - Async message passing (brokers or actors): msgs needs to be encoded by the sender and decoded by recipient.
 
 
-## Part 2: Foundations of Data Systems
+## Part 2: TBD
 
 ### Chapter X: TBD
