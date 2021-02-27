@@ -72,7 +72,7 @@ After this PR, if the server is shut down, we show an appropriated pop up saying
 
 ### AF-2177 — Add Project button should also allow importing
 
-![AF-2177(/assets/2019/2177.gif "2177")](/assets/2019/2177.gif)
+![AF-2177(/assets/2019/2177.jpg "2177")](/assets/2019/2177.jpg)
 
 
 ### AF-2213 — Import project URL cleanup
@@ -103,6 +103,6 @@ We also fixed several bugs and did some performance improvements on Business cen
 * AF-2162: Roles permissions are not persisted and reset
 * AF-2054 :Open asset is not updated for user who push the change
 
-# Thank you to everyone involved!
+## Thank you to everyone involved!
 
 I would like to thank everyone involved with this release, from the awesome Foundation Team Engineers, to the lifesavers QEs and all the UX people that help us make our work look awesome!
