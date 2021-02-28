@@ -3,6 +3,7 @@ layout: post
 title:  "Kogito Tooling 0.8.3 Released!"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2021-02-09 00:00:00 -0500
+fav: false
 ---
 We have just launched a fresh new Kogito Tooling release! 🎉
 

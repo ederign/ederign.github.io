@@ -80,3 +80,103 @@ Products(Remote):
 index.html of Products and cart are only used during developments of subprojects.
 
 index.html of Container is used during development + production
+
+
+
+### Section 3: Sharing Dependencies Between Apps
+
+#### Using Shared Modules
+
+Both cart and products modules both have faker as a dependency. The bad part is that we are loading in twice. (check vendors-node_modules_faker)
+
+[![Shared](/assets/2021/wiki/shared1.png "Process")](/assets/2021/wiki/shared1.png)
+
+Container should load just one and provide a copy for it. How?
+
+Add to both cart and products webpack.config.js:
+
+```
+new ModuleFederationPlugin({
+      name: "products",
+      filename: "remoteEntry.js",
+      shared: ["faker"], <=========
+      exposes: {
+        "./ProductsIndex": "./src/index",
+      },
+    }),
+```
+
+And then, we just have one faker loaded:
+
+[![Shared](/assets/2021/wiki/shared2.png "Shared")](/assets/2021/wiki/shared2.png)
+
+#### Async Script Loading
+
+After this, we need to add async script loading to our services. If we got this error message:
+
+[![Shared](/assets/2021/wiki/shared3.png "Shared")](/assets/2021/wiki/shared3.png)
+
+We should do this change on our apps:
+
+Move the code to another file, and load it on index like this:
+
+
+[![Shared](/assets/2021/wiki/shared4.png "Shared")](/assets/2021/wiki/shared4.png)
+
+
+This step introduces some asynchronicity for loading js code and gives room to webpack the opportunity to figure out which file needs to run successfully. 
+
+Asynd loading respects versioning of our apps. Two different versions makes two lib loadings. You can declare your libs as singleton in order to guarantee that is just a single version of the same app:
+
+```
+new ModuleFederationPlugin({
+      name: "products",
+      filename: "remoteEntry.js",
+      shared: {
+        faker: {
+          singleton: true,
+        },
+      },
+      exposes: {
+        "./ProductsIndex": "./src/index",
+      },
+    }),
+```
+
+How to run my code in isolation (microfront end dev) and production? An example:
+
+microfront-end:
+```
+import faker from "faker";
+
+const mount = (el) => {
+  const cartText = `<div> You have ${faker.random.number()} items in your cart</div>`;
+  el.innerHTML = cartText;
+  //ReactDOM.render(<App />, el) <- if it's react
+};
+
+//development mode of products microfrontend
+if (process.env.NODE_ENV === "development") {
+  const devDiv = document.getElementById("dev-cart");
+  if (devDiv) {
+    mount(devDiv);
+  }
+}
+
+export { mount };
+```
+
+On container app:
+
+```
+import { mount as mountProduct } from "products/ProductsIndex";
+import { mount as mountCart } from "cart/CartShow";
+
+console.log("Container");
+mountProduct(document.getElementById("my-products"));
+mountCart(document.getElementById("my-cart"));
+```
+
+
+### Section 4: Linking Multiple Apps Together
+
