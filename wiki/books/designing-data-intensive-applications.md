@@ -11,6 +11,8 @@ Author: Martin Kleppmann [twitter](https://twitter.com/martinkl) [amazon](https:
 
 ## Part 1: Foundations of Data Systems
 
+Part 1 discusses aspects of data systems that apply when data is stored on a single machine.
+
 ### Chapter 1: Reliable, Scalable, and Maintainable Applications
 
 The book discusses three concerns in software systems:
@@ -176,6 +178,22 @@ Different scenarios where data encodings are important:
 - Async message passing (brokers or actors): msgs needs to be encoded by the sender and decoded by recipient.
 
 
-## Part 2: TBD
+## Part 2: Distributed Data
 
-### Chapter X: TBD
+Part II discusses what happens if multiple machines are involved and storage and retrieval of data?
+
+Reasons for distributing a database across multiple machines: scalability, fault tolerance/high availability, latency (across multiple locations).
+
+*Scaling to higher load:*
+- Shared-memory/shared disk architecture (vertical scaling or scaling up): all components can be treated a single machine (cons: cost grow faster than linear, 2x CPUs/memory/disk costs usually more than 2x price; limited fault tolerance)
+- Share nothing architectures (horizontal scaling or scaling out): each machine is an independent node, coordination between nodes is done at the software level. (cons: incurs additional complexity for applications and sometimes limits the expressiveness of data models).
+  
+Two ways of distributing data across multiple nodes:
+
+- Replication: keeping a copy of the data on various nodes (provides redundancy);
+- Partitioning: split a big dataset into smaller ones called partitions, allowing different partitions being assigned to different nodes (sharding).
+
+
+### Chapter 5: Replication
+
+
