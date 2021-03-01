@@ -2,7 +2,8 @@
 layout: post
 title:  "3 steps to author BPMN, DMN assets on GitHub Codespaces"
 permalink: /:year/:month/:day/:title:output_ext
-date:   2021-02-19 00:00:00 -0500
+date:   2021-02-19 00:00:00 -
+fav: true
 ---
 Recently, GitHub launched early access to [GitHub Codespaces](https://github.com/features/codespaces), an online development environment hosted by GitHub and powered by Visual Studio Code, that allows you to develop entirely in the cloud.
 
