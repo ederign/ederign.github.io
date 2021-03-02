@@ -180,3 +180,8 @@ mountCart(document.getElementById("my-cart"));
 
 ### Section 4: Linking Multiple Apps Together
 
+inflx. requid1 : no shared state:  redux, no reducer, rno context, nothing like that between child projects
+
+
+inflexible 3
+css should be scoped

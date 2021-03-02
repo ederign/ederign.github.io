@@ -3,6 +3,7 @@ layout: post
 title:  "BPMN VSCode Extension Released (alpha)"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2019-09-11 00:00:00 -0500
+fav: true
 ---
 
 We are really happy to announce the alpha release of our first VSCode extension: the BPMN editor. This release marks the first piece of the new tooling infrastructure for the Kie Group Team.

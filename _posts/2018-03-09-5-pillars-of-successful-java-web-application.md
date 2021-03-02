@@ -3,6 +3,7 @@ layout: post
 title:  "5 Pillars of a Successful Java Web Application"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2018-09-02 00:00:00 -0500
+fav: true
 ---
 [Alex Porcelli](https://twitter.com/porcelli) and I had the opportunity to present at JavaOne San Francisco 2017 two talks related to our work: [“5 Pillars of a Successful Java Web Application](https://speakerdeck.com/ederign/5-pillars-of-a-successful-java-web-application-1)” and [The Hidden Secret of Java Open Source Projects](https://speakerdeck.com/ederign/the-hidden-secret-of-java-open-source-projects).
 

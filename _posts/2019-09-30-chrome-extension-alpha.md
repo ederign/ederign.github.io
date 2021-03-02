@@ -3,6 +3,7 @@ layout: post
 title:  "BPMN Chrome Extension Released (alpha)"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2019-09-30 00:00:00 -0500
+fav: true
 ---
 Are you tired of (impossible) big XML code reviews of BPMN diagrams on GitHub Pull Requests?
 

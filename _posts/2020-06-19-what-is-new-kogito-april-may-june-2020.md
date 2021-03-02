@@ -3,6 +3,7 @@ layout: post
 title:  "What is new on Kogito Tooling from Foundation Team perspective — April/May/Jun 2020"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2020-06-19 00:00:00 -0500
+fav: false
 ---
 Recently, we had a lot of cool new features on Kogito Tooling added by Foundation Team. Those features are distributed on Kogito Tooling latest releases!
 This post will do a quick overview of those. I hope you guys enjoy it!

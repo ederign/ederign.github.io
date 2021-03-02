@@ -3,6 +3,7 @@ layout: post
 title:  "What is new on Business Central, from Foundation Team perspective — September 2020"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2020-09-21 00:00:00 -0500
+fav: false
 ---
 We recently pushed many cool new features and bug fixes on Business Central added by Foundation Team. Those features are available at the 7.43.0 release.
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Clustering on Business Central 7 series: the missing manual"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2018-09-28 00:00:00 -0500
+fav: true
 ---
 One of our major goals in 7+ series of Business Central is to gradually move towards a cloud-ready environment. (Porcelli and I will talk about this on next [Oracle Code One](https://oracle.rainfocus.com/widget/oracle/oow18/catalogcodeone18?search=ignatowicz)).
 

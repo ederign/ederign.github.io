@@ -3,6 +3,7 @@ layout: post
 title:  "Transparent CDI Events Distribution in a Cluster Environment via Metaprogramming"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2018-09-07 00:00:00 -0500
+fav: true
 ---
 In my opinion, one of the great features of the JavaEE/Jakarta EE programming model is the  CDI event mechanism.
 

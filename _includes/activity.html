@@ -1,18 +1,46 @@
 <h2>All posts:</h2>
 <ul class="activity">
   {% for post in site.posts %}
-  <li class="row">
+  {% if post.fav %}
+    <li class="row fav-row">
+  {% else %}
+    <li class="row regular-row">
+  {% endif %}
 
-    <div class="column column-20">
-      <span>{{ post.date | date: '%b %-d, %Y' }}</span>
-    </div>
+    {% if post.fav %}
+    <span onclick="filterStarredPosts()" class="fav gold">&#11088;</span>
+    {% else %}
+    <span class="fav white">&#9734;</span>
+    {% endif %}
+      <div class="column column-20">
+        <span>{{ post.date | date: '%b %-d, %Y' }}</span>
+      </div>
 
-    <div class="column">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title | escape }}
-      </a>
-    </div>
+      <div class="column">
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title | escape }}
+        </a>
+      </div>
 
   </li>
   {% endfor %}
 </ul>
+<script>
+
+let filtered = false;
+function filterStarredPosts() {
+    if(!filtered){
+      document.querySelectorAll('.regular-row').forEach(function(el) {
+        el.style.display = 'none';
+      });
+      filtered = true;
+    }
+    else {
+      document.querySelectorAll('.row').forEach(function(el) {
+        console.log(el);
+        el.style.display = '';
+      });
+      filtered = false;
+    }
+  }
+</script>

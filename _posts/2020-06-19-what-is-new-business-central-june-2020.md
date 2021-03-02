@@ -2,7 +2,8 @@
 layout: post
 title:  "What Foundation Team created for Business Central — June 2020"
 permalink: /:year/:month/:day/:title:output_ext
-date:   2020-06-19 00:00:00 -0500
+date:   2020-06-19 00:00:00 -
+fav: false
 ---
 Recently, we pushed new features on Business Central added by Foundation Team. Those features are available soon at 7.39 release. This post will do a quick overview of those. I hope you guys enjoy it!
 
