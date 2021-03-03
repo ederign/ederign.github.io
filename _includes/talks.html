@@ -1,7 +1,12 @@
 <div class="talks">
   {% for talk in site.talks reversed %}
 
+  {% if talk.link %}
+  <a href="{{ talk.link }}" target="_blank" class="talk">
+  {% else %}
   <a href="/assets/talks/{{ talk.file_name }}" target="_blank" class="talk">
+  {% endif %}
+ 
 
     <div style="background-color: {{ talk.color }}" class="thumb">
       <span>

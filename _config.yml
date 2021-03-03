@@ -2,7 +2,7 @@ title: Eder Ignatowicz
 author: Eder Ignatowicz
 email: ignatowicz@gmail.com
 description: >
-  Eder Ignatowicz's Personal blog 
+  Eder Ignatowicz's Personal blog
 baseurl: ""
 url: "https://ederign.me"
 google_analytics: "UA-119890893-1"
@@ -20,11 +20,21 @@ disqus:
 plugins:
   - jekyll-feed
 
+# --sunray: #edae49ff;
+#--brick-red: #d1495bff;
+# --metallic-seaweed: #00798cff;
+#--lapis-lazuli: #30638eff;
+#--indigo-dye: #003d5bff;
+
 talks:
-  - title: "FIXME"
-    conference: "FLISOL Campinas"
-    year: 2013
-    color: "#FBAA18"
+  - title: "The Multiplying Architecture2 "
+    conference: "Kie Live"
+    year: 2010
+    color: "#d1495bff"
     file_name: "2013-javascript-the-right-way.pdf"
 
-
+  - title: "The Multiplying Architecture"
+    conference: "Kie Live"
+    year: 2020
+    color: "#edae49ff"
+    link: "https://www.youtube.com/watch?v=Dvz0bGa9oh8"
