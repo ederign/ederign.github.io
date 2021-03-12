@@ -297,12 +297,12 @@ How does leader-based replication work under the hood? Here are some of the appr
 
 ##### Statement-based replication: 
  
-Leader logs write every write request (statement) that it executes and sends that statement log to followers. The leader sends all INSERT, UPDATE or DELETE statements to followers, and the follower parses and executes SQL statement as if it had been received from a client.
+Leader logs write every write request (statement) that it executes and sends that statement log to followers. The leader sends all INSERT, UPDATE or DELETE statements to followers, and the follower parses and executes SQL statements as if it had been received from a client.
 
 Problems with this approach:
 
 - Any statement with a nondeterministic function like NOW() or RAND() - will generate a different value on each replica.
-- If statements use autoincrementing column or depend on the existing data in the database, they must execute them in exactly the same order on each replica. Limiting when there are multiple concurrently executing transactions.
+- If statements use autoincrementing column or depend on the existing data in the database, they must execute them in the same order on each replica. Limiting when there are multiple concurrently executing transactions.
 - Statements with side-effects (triggers, stored procs, user-defined functions) may result in different side effects on each replica.
 
 It's possible to work around those issues. However, there are so many edge cases, and usually, other replication methods are preferred.
@@ -311,7 +311,7 @@ It's possible to work around those issues. However, there are so many edge cases
 
 Used by most of the storage engines, every write is appended to a log. Usually, if it's a log-structured (SStables, LSM-Trees) the log is the main storage place. In B-Tree, which overwrites individual blocks, every modification is first written to a write-ahead log to restore the index to a consistent state after a crash.
 
-The log is an append-only sequence of bytes containing all writes to the database. We can use the exact same leader log to build a replica on another node, building the exact same data structure as found on the leader.
+The log is an append-only sequence of bytes containing all writes to the database. We can use the exact same leader log to build a replica on another node, building the same data structure as found on the leader.
 
 Con: Log describes data on a very low level. WAL contains details of which bytes were changed in which disk blocks. Therefore replication is closely coupled to the storage engine if the DB changes the storage format, not typically possible to run different versions of the database software on the leader and followers.
 
@@ -335,3 +335,88 @@ Triggers let you register custom application code that is automatically executed
 Con: Trigger typically has a great overhead than other replication methods and is more prone to bugs and limitations than the built-in database replication. However, it can be useful due to its flexibility.
 
 #### Problems with replication lag
+
+Node failures are just one reason for wanting replication. Other potential ones are scalability and latency. Leader-based replication requires all writes go through a single node, but read-only queries can go to any replica.
+This is a read-scaling architecture, you can increase the capacity for serving read-only requests simply by adding more followers, but this only really works on asynchronous replication.
+
+With the async approach, a follower may fall behind, leading to inconsistencies in the database (eventual consistency). This is called replication lag and could be a fraction of a second or several seconds/minutes, so some problems may arise. How to solve them?
+
+##### Read-after-write consistency: users should always see data that they submitted themselves.
+
+How to implement it?
+
+- When reading something that the user may have modified, read it from the leader;
+- Track the time of the last update, for one minute after the last update, make all reads from the leader;
+- Client can remember the timestamp of the most recent write, and the system can use it to ensure that we are reading from a replica updated.
+If your replicas are distributed across multiple data centers, any request needs to be routed to the data center containing the leader.
+
+##### Monotonic reads: after users have seen the data at one point in time, they shouldn't later see the data from some earlier point in time
+
+We should make sure that each user always makes their reads from the same replica. The replica can be chosen based on a hash of the user ID. If the replica fails, the user's queries will need to be rerouted to another replica.
+
+##### Consistent prefix reads
+
+Users should see the data in a state that makes casual sense: for example, seeing a question and its reply in the correct order. This is a particular problem in partitioned (sharded) databases as there is no global ordering of writes. 
+
+A solution is to make sure any writes casually related to each other are written in the same partition.
+
+##### Solutions for replication lag
+Transactions exist, so there is a way for a database to provide stronger guarantees so that the application can be simpler.
+
+
+
+#### Multi-Leader replication
+
+Leader-based replication has one major downside: there is only one leader, and all writers must go through it.
+
+A natural extension is to allow more than one node to accept writes (multi-leader, master-master, or active/active replication) where each leader simultaneously acts as a follower to the other leaders. 
+
+It rarely makes sense to use a multi-leader set up within a single datacenter, but let's discuss some use cases:
+
+##### Multi-datacenter operation
+
+One leader in each datacenter. Inside the same datacenter, regular leader-follower replication is used. Between datacenters, each datacenter leader replicates its changes to the leaders in other datacenters.
+
+Compared to a single-leader replication model deployed in multi-datacenters
+
+- Performance. With single-leader, every write must go across the internet to wherever the leader is, adding significant latency. In multi-leader, every write is processed in the local datacenter and replicated asynchronously to other datacenters. The network delay is hidden from users, and perceived performance may be better.
+- Tolerance of datacenter outages. In single-leader, if the datacenter with the leader fails, failover can promote a follower in another datacenter. In multi-leader, each datacenter can continue operating independently from others.
+- Tolerance of network problems. Single-leader is very sensitive to problems in this inter-datacenter link as writes are made synchronously over this link. Multi-leader with asynchronous replication can tolerate network problems better.
+
+
+Some relational DBs implement Multi-leader replication, but it's common to fall on subtle configuration pitfalls, i.e., autoincrementing keys, triggers, and integrity constraints can be problematic. 
+
+Multi-leader replication is often considered dangerous territory and avoided if possible.
+
+
+Other examples of this type of operation are on clients with the offline operation (i.e. calendar app) and also collaborative editing (i.e google docs)
+
+
+##### Handling write conflicts
+
+The biggest problem with multi-leader replication is when conflict resolution is required. This problem doesn't happen for single-leader databases because the conflict detection happens synchronously; only one writer can write each time.
+
+But for multi-leader, if both writes are successfull, the conflict is only detected asynchronously later. Some ways to deal with it:
+
+- Conflict avoidance: if all writes for a particular record go through the same leader, conflicts cannot occur.
+Converging towards a consistent state, all replicas should converge for the same state when all changes are replicated. 
+  
+Some ways to achieve that is to give each write a unique ID (i.e. timestamp, UUID) and select the winner based on that, give some replica precedence (but can prone to data loss), merge the values, record the conflict and maybe prompt the user to fix it manually.
+
+
+#### Multi-leader replication topologies
+
+Describes the communication path along which writes are propagated from one node to another. It could be circular, star, all-to-all.
+
+#### Leaderless replication
+
+Any replica can directly accept writes from clients. This is used on some databases like Amazon's in-house Dynamo datastore. Riak, Cassandra and Voldemort follow the Dynamo style.
+
+In a leaderless configuration, failover does not exist. Clients send the write to all replicas in parallel. Read requests are also sent to several nodes in parallel. The client may get different responses. Version numbers are used to determine which value is newer.
+
+Eventually, all the data is copied to every replica. After an unavailable node come back online, it has two different mechanisms to catch up:
+
+- Read repair. When a client detects any stale responses, write the newer value back to that replica.
+- Anti-entropy process. There is a background process that constantly looks for differences in data between replicas and copies any missing data from one replica to the other. It does not copy writes in any particular order.
+
+Dynamo-style databases are generally optimized for use cases that can tolerate eventual consistency. There are some quorums algorithms for reading and writing for cases where the database needs to determine if an operation happened before another or whether they happened concurrently.
