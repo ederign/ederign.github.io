@@ -19,9 +19,10 @@ Problems list:
 ## Arrays and String
 
 ### CCI Book: Arrays and Strings
-
+https://github.com/careercup/CtCI-6th-Edition/tree/master/Java/Ch%2001.%20Arrays%20and%20Strings
 
 ### Leet code videos
+https://seanprashad.com/leetcode-patterns/
 https://leetcode.com/explore/learn/card/array-and-string/
 https://leetcode.com/explore/learn/card/fun-with-arrays/
 https://leetcode.com/explore/learn/card/hash-table/

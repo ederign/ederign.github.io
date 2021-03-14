@@ -4,9 +4,18 @@ title: Project Loom
 last_updated: 2021-02-09
 ---
 
-### Talk Summaries
+## Open JDK Wiki
+[link](https://wiki.openjdk.java.net/display/loom)
 
-#### Prepare for What 'Looms' Ahead
+
+
+
+
+
+
+## Talk Summaries
+
+### Prepare for What 'Looms' Ahead
 
 Speaker: Heinz Kabutz [link](https://skillsmatter.com/meetups/13271-prepare-for-what-looms-ahead) https://skillsmatter.com/meetups/13271-prepare-for-what-looms-ahead
 
