@@ -27,14 +27,242 @@ plugins:
 #--indigo-dye: #003d5bff;
 
 talks:
-  - title: "The Multiplying Architecture2 "
-    conference: "Kie Live"
-    year: 2010
+  - title: "Surfando na Maré Ágil"
+    conference: "Anhanguera University"
+    year: 2011
+    color: "#00798cff"
+    link: "https://ederign.me"
+
+  - title: "Desenvolvimento Ágil em Java "
+    conference: "Caipira Ágil 2011"
+    year: 2011
+    color: "#003d5bff"
+    file_name: "Caipira Agil.pdf"
+
+  - title: "BDD além do Hello World"
+    conference: "TDC Goiânia"
+    year: 2011
+    color: "#30638eff"
+    file_name: "BDD-TDC-GO.pdf"
+
+  - title: "Desenvolvimento Ágil em Java "
+    conference: "QCon SP 2011"
+    year: 2011
+    color: "#003d5bff"
+    file_name: "Desenvolvimento Agil - QCON.pdf"
+
+  - title: "Desenvolvimento Ágil Orientado a Testes "
+    conference: "TDC Florianópolis"
+    year: 2011
     color: "#d1495bff"
-    file_name: "2013-javascript-the-right-way.pdf"
+    file_name: "dev-tests-floripa-11.pdf"
+
+  - title: "Desenvolvimento Ágil Orientado a Testes "
+    conference: "TDC Florianópolis"
+    year: 2011
+    color: "#30638eff"
+    file_name: "dev-tests-floripa-11.pdf"
+
+  - title: "Rest In Java 2.0"
+    conference: "TDC SP 2012"
+    year: 2012
+    color: "#edae49ff"
+    file_name: "rest-java.pdf"
+
+  - title: "Não existe Agile sem Design Ágil"
+    conference: "TDC Goiania 2012"
+    year: 2012
+    color: "#d1495bff"
+    file_name: "Agile-tdc-goiania.pdf"
+
+  - title: "Rest In Java 2.0"
+    conference: "TDC Goiania 2012"
+    year: 2012
+    color: "#30638eff"
+    file_name: "rest-java.pdf"
+
+  - title: "Rest In Java 2.0"
+    conference: "QCon SP 2012"
+    year: 2012
+    color: "#003d5bff"
+    file_name: "REST Qcon.pdf"
+
+  - title: "Drools em Instituições Financeiras"
+    conference: "Just Java 2012"
+    year: 2012
+    color: "#30638eff"
+    file_name: "drools.pdf"
+
+  - title: "NoSQL"
+    conference: "Semana da Computação Faccamp 2012"
+    year: 2012
+    color: "#00798cff"
+    file_name: "NoSQL Faccamp.key.pdf"
+
+  - title: "Google App Engine Overview"
+    conference: "Semana da Computação Faccamp 2013"
+    year: 2013
+    color: "#30638eff"
+    file_name: "GAE.pdf"
+
+  - title: "Neo 4 what?"
+    conference: "TDC SP 2013 "
+    year: 2013
+    color: "#003d5bff"
+    file_name: "Neo4j-TDCSP2013.pdf"
+
+  - title: "O que eu queria saber há alguns anos sobre como manter uma suíte de testes funcionais"
+    conference: "TDC SP 2013 "
+    year: 2013
+    color: "#00798cff"
+    file_name: "suite de testes funcionais.pdf"
+
+  - title: "Design de Software morreu?"
+    conference: "Devcamp 2013 "
+    year: 2013
+    color: "#003d5bff"
+    file_name: "design-morreu.pdf"
+
+  - title: "Neo 4 what?"
+    conference: "Just Java 2013 "
+    year: 2013
+    color: "#edae49ff"
+    file_name: "Neo4j-TDCSP2013.pdf"
+
+  - title: "Design de Software morreu?"
+    conference: "Agile Brazil 2013 "
+    year: 2013
+    color: "#003d5bff"
+    file_name: "design-morreu.pdf"
+
+  - title: "Aplicações Financeiras Flexíveis através de DSLs na Plataforma Java"
+    conference: "QCon SP 2013 "
+    year: 2013
+    color: "#00798cff"
+    file_name: "DSLs.pdf"
+    
+  - title: "Approaching Pure REST in Java: HATEOAS and HTTP Tuning"
+    conference: "Java One SF 2013 "
+    year: 2013
+    color: "#d1495bff"
+    file_name: "rest-j1sf13.pdf"
+
+  - title: "Código funcional em Java"
+    conference: "QCon SP 2015 "
+    year: 2015
+    color: "#003d5bff"
+    link: "https://www.infoq.com/br/presentations/codigo-funcional-em-java-superando-o-hype/"
+
+  - title: "Domando a Programação Reativa com Vert.x"
+    conference: "Red Hat Forum 2016 "
+    year: 2016
+    color: "#30638eff"
+    file_name: "Domando_a_Programação_Reativa_com_Vert.x.pdf"
+
+  - title: "Código funcional em Java: Superando o Hype"
+    conference: "TDC SP 2016 "
+    year: 2016
+    color: "#d1495bff"
+    file_name: "html5-java.pdf"
+
+  - title: "Construindo aplicações HTML5 em Java "
+    conference: "TDC Floripa 2016 "
+    year: 2016
+    color: "#30638eff"
+    file_name: "tdc-sp-2016.pdf"
+
+  - title: "Refactoring Your Code with Java 8 FP to the Rescue "
+    conference: "Java One SF 2016 "
+    year: 2016
+    color: "#edae49ff"
+    file_name: "refact-j1sf2016.pdf"
+  
+  - title: "Refactoring to Patterns"
+    conference: "QCon SP 2016 "
+    year: 2016
+    color: "#d1495bff"
+    file_name: "QCon 2016 - Refactoring To Patterns.pdf"
+
+  - title: "Go Reactive with Vert.x"
+    conference: "Java One SF 2016 "
+    year: 2016
+    color: "#d1495bff"
+    file_name: "j1sf16-vertx.pdf"
+
+  - title: "Java Stream Deep Dive"
+    conference: "Java One SP 2016 "
+    year: 2016
+    color: "#edae49ff"
+    file_name: "Streams.pdf"
+
+  - title: "5 pilares para uma aplicação Java Web bem-sucedida "
+    conference: "Oracle Code One SP 2017"
+    year: 2017
+    color: "#30638eff"
+    file_name: "5pillar-pt.pdf"
+
+  - title: "Aplicações web que permanecem"
+    conference: "QCon SP 2017"
+    year: 2016
+    color: "#d1495bff"
+    link: "https://www.infoq.com/br/presentations/aplicacoes-web-que-permanecem-uma-abordagem-arquitetural-ava/?itm_source=infoq&itm_campaign=user_page&itm_medium=link"
+
+  - title: "Annotation Processing: um dos segredos dos projetos Java Open Source  "
+    conference: "Sou Java Campinas 2017"
+    year: 2017
+    color: "#d1495bff"
+    file_name: "Sou Java Campinas - 2017 - Annotations.pdf"
+
+  - title: "The Hidden Secret of Java Open Source Projects"
+    conference: "Oracle Code One SF 2017"
+    year: 2017
+    color: "#edae49ff"
+    file_name: "5pillars-en.pdf"
+
+  - title: "5 Pillars of a Successful Java Web Applications"
+    conference: "Oracle Code One SF 2017"
+    year: 2017
+    color: "#00798cff" 
+    file_name: "annotations-j1sf.pdf"
+
+  - title: "Java EE Monolith to Cloud-Ready Architecture"
+    conference: "Oracle Code One SF 2018"
+    year: 2018
+    color: "#003d5bff"
+    file_name: "codeone18.pdf"
+
+  - title: "A Cloud-Native Dev Is Eating My Java Cheese!"
+    conference: "Oracle Code One SF 2019"
+    year: 2019
+    color: "#edae49ff"
+    file_name: "Oracle Code One 2019-rhtemplate.pdf"
+
+  - title: "From Java 8 to 15 in 30 mins"
+    conference: "TDC Goiânia"
+    year: 2020
+    color: "#00798cff"
+    file_name: "java-moderno.pdf"
+
+  - title: "From Java 8 to 15 in 30 mins"
+    conference: "TDC Sao Paulo"
+    year: 2020
+    color: "#00798cff"
+    file_name: "java-moderno.pdf"
+
+  - title: "The Multiplying Architecture"
+    conference: "TDC São Paulo"
+    year: 2020
+    color: "#30638eff"
+    file_name: "kielive09-the-multiplying-architecture.pdf"
+
+  - title: "The state-of-the-art of developer tools to build apps on RHPAM v7"
+    conference: "Red Hat Summit"
+    year: 2020
+    color: "#d1495bff"
+    file_name: "rh-summit20.pdf"
 
   - title: "The Multiplying Architecture"
     conference: "Kie Live"
     year: 2020
-    color: "#edae49ff"
+    color: "#30638eff"
     link: "https://www.youtube.com/watch?v=Dvz0bGa9oh8"

@@ -3,13 +3,32 @@ layout: wiki
 title: Project Loom
 last_updated: 2021-02-09
 ---
+## Talk topics & reminders
 
-## Open JDK Wiki
-[link](https://wiki.openjdk.java.net/display/loom)
+Benchmark https://github.com/sormuras/junit5-looming/blob/master/STORY.md
+https://twitter.com/sormuras/status/1326793610176684032
+https://twitter.com/sormuras/status/1326806829456875521/retweets/with_comments
 
 
 
 
+## Blogs and  wikis
+[Open JDK Wiki](https://wiki.openjdk.java.net/display/loom)
+
+
+
+https://developerlife.com/2019/12/02/project-loom-experiment/
+https://github.com/nazmulidris/loomexample
+https://inside.java/2020/08/07/loom-performance/
+https://www.reddit.com/r/java/comments/evtxe4/project_loom_new_earlyaccess_build_build/
+https://www.javaadvent.com/2020/12/project-loom-and-structured-concurrency.html
+https://blogs.oracle.com/javamagazine/going-inside-javas-project-loom-and-virtual-threads
+http://cr.openjdk.java.net/~rpressler/loom/loom/sol1_part1.html
+https://developers.redhat.com/blog/2019/06/19/project-loom-lightweight-java-threads/
+https://blog.softwaremill.com/will-project-loom-obliterate-java-futures-fb1a28508232
+https://horstmann.com/unblog/2019-12-05/
+https://i-rant.arnaudbos.com/loom-part-0-rationale/
+https://github.com/sormuras/junit5-looming
 
 
 
