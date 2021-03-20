@@ -140,7 +140,7 @@ talks:
     year: 2013
     color: "#00798cff"
     file_name: "DSLs.pdf"
-    
+
   - title: "Approaching Pure REST in Java: HATEOAS and HTTP Tuning"
     conference: "Java One SF 2013 "
     year: 2013
@@ -176,7 +176,7 @@ talks:
     year: 2016
     color: "#edae49ff"
     file_name: "refact-j1sf2016.pdf"
-  
+
   - title: "Refactoring to Patterns"
     conference: "QCon SP 2016 "
     year: 2016
@@ -217,13 +217,13 @@ talks:
     conference: "Oracle Code One SF 2017"
     year: 2017
     color: "#edae49ff"
-    file_name: "5pillars-en.pdf"
+    file_name: "annotations-j1sf.pdf"
 
   - title: "5 Pillars of a Successful Java Web Applications"
     conference: "Oracle Code One SF 2017"
     year: 2017
-    color: "#00798cff" 
-    file_name: "annotations-j1sf.pdf"
+    color: "#00798cff"
+    file_name: "5pillars-en.pdf"
 
   - title: "Java EE Monolith to Cloud-Ready Architecture"
     conference: "Oracle Code One SF 2018"
@@ -266,3 +266,9 @@ talks:
     year: 2020
     color: "#30638eff"
     link: "https://www.youtube.com/watch?v=Dvz0bGa9oh8"
+
+  - title: "Project Loom e como ele revolucionará a plataforma Java"
+    conference: "TDC Innovation"
+    year: 2021
+    color: "#edae49ff"
+    file_name: "Project Loom-TDC.pdf"
