@@ -284,3 +284,9 @@ talks:
     year: 2021
     color: "#00798cff"
     file_name: "DoJava8aoJava17em30minutos.pdf"
+
+  - title: "Lessons learned after 18 months of Micro Frontends adoption"
+    conference: "TDC Innovation"
+    year: 2021
+    color: "#00798cff"
+    file_name: "MicrofrontendsAdoption_Multiplying.pdf"
