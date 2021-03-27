@@ -185,3 +185,118 @@ inflx. requid1 : no shared state:  redux, no reducer, rno context, nothing like 
 
 inflexible 3
 css should be scoped
+
+
+### Section 5: Generic Ties Between Projects
+
+
+
+
+
+### Section 6: Implementing a CI/CD Pipeline
+
+deployment slide (48)
+
+next  is about step 2 (location of child)
+
+at buld time , webpack/we need to know where the remote file is located
+
+remoteEntry file is fixed related to location of child app (At present == web pack module federation plugin, there is work being done to dynamic name)
+
+55 silde
+
+### Section 7: Deployment to Amazon Web Services
+
+62 script tag of main doesn't have the tag, uses cloud front url need to put it the /contianer/latest should use 63 webpal public path
+
+Microfront ends behave != in dev and producton
+
+### Section 8: Microfrontend-Specific AWS Config
+64 still doesn't work because 
+see setp on github actions, this is important for index but also create invalidation for each invalidation remoteEntry.js
+
+
+Why so much js files?
+all separated dependencies package json file and try to include those as separade included JS files (to load it just once)
+if you want one big bundle, remove shared
+
+
+optional, production style workflow
+
+### Section 9: Handling CSS in Microfrontends
+
+Scope CSS solutions slide
+
+bugs when use same css-in-js of material ui library between !=- projects (colision, aula 76)) (problem with conflicts of class name generation)
+
+
+
+### Section 10: Implementing Multi-Tier Navigation'
+80
+Navigation requirements 
+infx requirement 1 and 2 and 3 and 4 (Screen Shot 2021-03-06 at 10.03.01 AM.png)
+5 and 6 
+
+81 Summary
+
+82 Overview routing libraies 
+
+why browser on cintainer and memory on childs?
+ony container use browser address bar, to avoid race conditions
+
+83, communication between services
+
+
+
+
+### Section 11: Performance Considerations
+
+Screen Shot 2021-03-06 at 11.30.58 AM.png
+
+public path issue (remote entry screen shot)
+
+
+98, we need to reate a entry point for memory history
+
+
+### 99. Lazily Loading SubApps
+
+Lazy load of microfront ends with module federation
+
+lazy, Suspense
+const MarketingLazy = lazy(() => import("./components/MarketingApp"));
+
+ <Suspense fallback={<div>loading...</div>}>
+            <Switch>
+              <Route path="/auth" component={AuthLazy} />
+              <Route path="/" component={MarketingLazy} />
+            </Switch>
+          </Suspense>
+
+### Section 12: Authentication in Microfrontends
+
+
+### Section 13: Using Other Frontend Frameworks
+
+
+wrapup
+
+slide
+
+
+### Next
+
+https://docs.google.com/presentation/d/1sH1KhhVK01jGlO5ZlVE8Hm0jHArA1xdR583tmZ7dOVg/edit#slide=id.gc4b40cd802_0_177
+
+Demo with two micro-front ends consuming bpmn/dmn editors, loading the lib only and with bpmn/dmn microfrontend hosted on github. (remember to take a look on Tiago's sample)
+
+Next, DashBuilder runtimes being consumed as a microfront end
+
+what are the cons of federated modules
+
+
+TODO: replace aws CLI action
+
+? Does pf4 react does css-in-js?
+
+
