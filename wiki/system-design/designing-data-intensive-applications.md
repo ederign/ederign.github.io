@@ -420,3 +420,6 @@ Eventually, all the data is copied to every replica. After an unavailable node c
 - Anti-entropy process. There is a background process that constantly looks for differences in data between replicas and copies any missing data from one replica to the other. It does not copy writes in any particular order.
 
 Dynamo-style databases are generally optimized for use cases that can tolerate eventual consistency. There are some quorums algorithms for reading and writing for cases where the database needs to determine if an operation happened before another or whether they happened concurrently.
+
+### Chapter 6: Partitioning
+

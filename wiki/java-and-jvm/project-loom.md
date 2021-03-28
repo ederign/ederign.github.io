@@ -25,11 +25,26 @@ https://www.javaadvent.com/2020/12/project-loom-and-structured-concurrency.html
 https://blogs.oracle.com/javamagazine/going-inside-javas-project-loom-and-virtual-threads
 http://cr.openjdk.java.net/~rpressler/loom/loom/sol1_part1.html
 https://developers.redhat.com/blog/2019/06/19/project-loom-lightweight-java-threads/
-https://blog.softwaremill.com/will-project-loom-obliterate-java-futures-fb1a28508232
-https://horstmann.com/unblog/2019-12-05/
-https://i-rant.arnaudbos.com/loom-part-0-rationale/
+
+
 https://github.com/sormuras/junit5-looming
 
+
+https://i-rant.arnaudbos.com/loom-part-0-rationale/
+
+blocking vs no blocking
+https://www.youtube.com/watch?v=v5Z8rOTzM8s&ab_channel=Devoxx
+
+slide com summary: https://youtu.be/v5Z8rOTzM8s?t=869
+https://speakerdeck.com/arnaudbos/untangled-sneak-peek-at-project-loom slides
+https://archive.jlongster.com/Whats-in-a-Continuation
+https://web.archive.org/web/20191122044527/https://blog.paralleluniverse.co/2014/02/04/littles-law/
+
+
+https://horstmann.com/unblog/2019-12-05/
+
+
+https://blog.softwaremill.com/will-project-loom-obliterate-java-futures-fb1a28508232
 
 
 ## Talk Summaries
