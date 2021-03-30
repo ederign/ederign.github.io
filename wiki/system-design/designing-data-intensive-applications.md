@@ -39,15 +39,15 @@ The book discusses three concerns in software systems:
 
 Data models have a profound effect on systems, not only on how it is written but also on how *we think* about the problem that we are solving, i.e., Relational Models vs. Document model;
 
-- Relational Versus Document Databases Today
-  - Document data model pros: schema flexibility, a better performance due to locality and close to data structures used by the application;
-  - Relational data model pros: better support for joins, and many-to-one and many-to-many relationships;
-  - Data locality for queries
-    - documents are usually stored as a single string. If the system needs to fetch all data from a doc, it provides a better data locality than the same data distributed/normalized over multiple tables
-  - *Document databases:* use cases where data comes in self-contained docs and relationships between docs are rare;
-  - *Graph databases*: use cases where data are usually related to other data
-  - Document and graph databases usually don't enforce a schema (easier to adapt for new requirements, but the application still assumes that the data has a certain structure
-    - schema explicit (enforced on write) or implicit (assume on reading)
+* Relational Versus Document Databases Today
+  * Document data model pros: schema flexibility, a better performance due to locality and close to data structures used by the application;
+  * Relational data model pros: better support for joins, and many-to-one and many-to-many relationships;
+  * Data locality for queries
+    * documents are usually stored as a single string. If the system needs to fetch all data from a doc, it provides a better data locality than the same data distributed/normalized over multiple tables
+    * *Document databases:* use cases where data comes in self-contained docs and relationships between docs are rare;
+  * *Graph databases*: use cases where data are usually related to other data
+  * Document and graph databases usually don't enforce a schema (easier to adapt for new requirements, but the application still assumes that the data has a certain structure
+    * schema explicit (enforced on write) or implicit (assume on reading)
 
 ## Chapter 3: Storage and Retrieval
 
@@ -55,7 +55,7 @@ A database needs to do two things: when you give it data, it should store it; an
 
 To select and tune a storage engine to perform well for some kind of workload, you need to have a rough idea of what the storage engine is doing under the hood. (i.e., big difference between storage engines optimized for transactional workloads (OLTP) and those optimized for analytics (OLAP).
 
-**Data Structures That Power Your Database**
+### Data Structures That Power Your Database
 
 Many database tables use a *log*, an append-only data file. (very efficient to append but O(n) to lookup). To speed this up, we need an index. Any index slow down writes (index must be updated every time data is written).
 
@@ -95,8 +95,8 @@ Evolvability: we should aim to build systems that make it easy to adapt to chang
 
 Most of the changes require changes also to data in stores, two ways of coping with that:
 
-- Relational databases: schemas assume all data conforms to one schema, which can be changed (via scheme migrations)
-- Schema on read ('schemaless/document"): don't enforce a schema and can contain a mixture of anolder and newer format written in different times (versions of the app).
+* Relational databases: schemas assume all data conforms to one schema, which can be changed (via scheme migrations)
+* Schema on read ('schemaless/document"): don't enforce a schema and can contain a mixture of anolder and newer format written in different times (versions of the app).
 
 When a schema changes, we probably need also to change the application code. In large applications, this cannot happen instantaneously, on:
 
@@ -416,10 +416,85 @@ In a leaderless configuration, failover does not exist. Clients send the write t
 
 Eventually, all the data is copied to every replica. After an unavailable node come back online, it has two different mechanisms to catch up:
 
-- Read repair. When a client detects any stale responses, write the newer value back to that replica.
-- Anti-entropy process. There is a background process that constantly looks for differences in data between replicas and copies any missing data from one replica to the other. It does not copy writes in any particular order.
+* Read repair. When a client detects any stale responses, write the newer value back to that replica.
+* Anti-entropy process. There is a background process that constantly looks for differences in data between replicas and copies any missing data from one replica to the other. It does not copy writes in any particular order.
 
 Dynamo-style databases are generally optimized for use cases that can tolerate eventual consistency. There are some quorums algorithms for reading and writing for cases where the database needs to determine if an operation happened before another or whether they happened concurrently.
 
 ### Chapter 6: Partitioning
 
+Partitioning (also know as sharding) is a process to split a large dataset into smaller subset. Why? To improve system scalability, particularly when the dataset is too large to store and process in a single machine;
+
+Goal: spread the data and query load evenly across multiple machines and avoid hot spots (nodes with disproportionally high load).
+
+#### Partitioning and replication
+
+Both are usually combined, meaning that copies of each partitions are stored on multiple nodes.
+
+##### Partitioning of Key-Value Data
+
+Goal to spread the data and query load evenly across nodes avoiding 'hot spots'. Some ways to do it.
+
+##### Partitioning Randomly
+
+This distributes data evenly across the nodes, but has a big disadvantage: when read a given item, we would node to query all nodes in parallel (because we don't know where the item was stores).
+
+##### Partitioning by Key-Range
+
+Assign a continuous range of sorted keys (from some minimum to some maximum) to each partition. If you know the boundaries between ranges, you can easily determine which partition contains a given key and directly request data from a node.
+
+Range scans/queries are easy and efficient. It is used by Google Bigtable, HBase, RethinkDB, and MongoDB, but certain access patterns can lead to hot spots (as example if we are saving data from a sensor and partitioning via timestamp).
+
+Partitions are usually rebalanced when a partition gets to big.
+
+##### Partitioning by Hash of Key
+
+Hash function can produce evenly distributed values so we can use the hash of data key to determine the partition and ensure the even data distribution.
+
+This method destroy the ordering of keys, making range queries inefficient, but distributes the load more evenly.
+
+#### Partitioning and secondary indexes
+
+If records are not only accessed by primary key, i.e. as a secondary index, they also needs to be partitioned. Two ways to do this:
+
+##### Local Indexes
+  
+Each partition is completely separate: each partition maintains its own secondary indexes, covering only the documents in that partition. It is also called document-partitioned index.
+
+The write of indexes in the method is simple: all updates are within its own partition. However, for a read request, it have to query all partitions to gather data from all possible location. This is used by MongoDB, Riak, Cassandra, ElasticSearch, SolrCloud, and VoltDB.
+
+![partitioning secondary indexes](/assets/2021/wiki/partition1.png)
+
+##### Global Indexes
+
+A global index is to cover data in all partitions, but it is split by term in order to stored in different partitions. This is also called term-partitioned index.
+
+The advantage is that read is easy. One can just read one partition for an indexed term and knows all data keys (even they are in different partitions). But writes are slower in this case because writing one partition requires updating indexes that may be stored at other partitions. This is used by AWS DynamoDB, Oracle.
+
+![partitioning secondary indexes](/assets/2021/wiki/partition2.png)
+
+#### Rebalancing Partitions
+
+As the data and system grow, the partitions also need to be updated. This process is called rebalancing. Some ways to do this:
+
+* **Fixed number of partitions**: This is a simple solution: create many more partitions than there are nodes, and assign several partitions to each node. As each rebalancing, just allocate a partition from each node to the new node. The challenge things is to chose the right number of partitions at the beginning, which will match the future data growth.
+* **Dynamic Partitioning**: split or merge partitions based on some parameters, i.e volume of data in a partition. Really useful for key-ranged partitioned data and also to hash partitioning.
+* **Partitioning Proportionally to nodes**:  This strategy instead rebalances partitions with a node created or removed.
+
+#### Request Routing
+
+We have now partitioned our dataset across multiple nodes running on multiple machines. But there remains an open question: when a client wants to make a request, how does it know which node to connect to?
+
+Three strategies could be applied:
+
+* Allow clients to contact any node. If that node happens to own the partition to which the request applies, it can handle the request. Otherwise, it forwards the request to the appropriate node, receives the response, and passes to the client.
+
+* Send all requests from clients from a routing tier first, which determines the node that should handle each request and forwards it accordingly. This routing tier does not itself handle any requests and it only acts as a partition-aware load balancer.
+
+* Require that clients be aware of the partitioning and the assignment of partitions to nodes. In this case, a client can connect directly to the appropriate node, without any intermediary.
+
+![partition 3](/assets/2021/wiki/partition3.png)
+
+However this creates a new problem: how does the components learn about changes in the assignments of partitions to nodes?
+
+We would need a consensus protocol or a separated coordination service like ZooKeeper.
