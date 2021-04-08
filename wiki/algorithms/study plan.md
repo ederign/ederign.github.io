@@ -32,10 +32,16 @@ TBD
 
 #### Hash Tables
 
-If number colisions are very high, worst case runtime is O(n) where n is the number of keys. We generally assume a good implementation, where lookup time is O(1).
+If number collisions are very high, worst case runtime is O(n) where n is the number of keys. We generally assume a good implementation, where lookup time is O(1).
 
 ##### 217. Contains Duplicate
+
 If an algorithm is O(n^2) it can handle n up to around 10^4. It gets Time Limit Exceeded when n >= 10^5
+
+##### 268. Missing Number
+
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
 
 #### ArrayList & Resizable Arrays
 
@@ -67,4 +73,3 @@ TBD
 
 
 ### TODO: 
-- Repeat binary search exercise
