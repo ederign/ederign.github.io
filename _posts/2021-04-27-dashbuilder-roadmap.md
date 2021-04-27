@@ -35,7 +35,7 @@ Dashbuilder can extract data from heterogeneous sources of information such as  
 
 For additional information, take a look at this post with a deep dive in our [Prometheus](https://blog.kie.org/2021/03/building-prometheus-dashboards-in-business-central.html) support.
 
-## Victory and Other Components
+## Victory Charts and Other Components
 
 It is possible to use any data visualization library you want in DashBuilder using External Components. Use external components to either add new ways to visualize data like [heatmaps](https://blog.kie.org/2021/01/heatmap-component-for-business-central-and-jbpm.html) or use alternative libraries such as [Victory Chars](https://www.patternfly.org/v4/charts/about/).
 
@@ -49,11 +49,11 @@ Victory Chart Custom components:
 
 ## Time Series with Apex Charts
 
-We also recently introduced a new component based on Apex Charts to represent time-series metrics to smoothly support the new Prometheus data-set provider.
+We also recently introduced a new component based on Apex Charts to represent time-series metrics to smoothly support the new Prometheus data set provider.
 
 [![Dashbuilder](/assets/2021/dbblog6.gif "Dashbuilder")](/assets/2021/dbblog6.gif)
 
-Now, you can provide a custom dataset or Prometheus metrics and create visualizations of your time series data on a line or area chart using DashBuilder. See this [blog post](https://blog.kie.org/2021/03/time-series-component-for-dashbuilder.html) for more details.
+Now, you can provide a custom data set or Prometheus metrics and create visualizations of your time series data on a line or area chart using DashBuilder. See this [blog post](https://blog.kie.org/2021/03/time-series-component-for-dashbuilder.html) for more details.
 
 ## DashBuilder Lightweight Runtime and Multi-Tenancy
 
