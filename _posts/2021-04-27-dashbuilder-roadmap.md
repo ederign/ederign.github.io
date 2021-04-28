@@ -6,7 +6,7 @@ date:   2021-04-27 00:00:00 -0500
 fav: true
 ---
 
-DashBuilder is a tool for the building of reporting and monitoring business dashboards, licensed under the business friendly Apache Software License (ASL). It has a strong emphasis on flexible navigation and page layouts, to ensure you can organise your content the way you want. It is decoupled from the data sources, with support for Prometheus, JDBC, Elastic Search, Kafka, CVS and Java Beans. It has a simple JavaScript API for extensions, and provides out of the box support for Victory Charts and Apex Charts - with the later providing time series support.
+DashBuilder is a tool for the building of reporting and monitoring business dashboards, licensed under the business-friendly Apache Software License (ASL). It has a strong emphasis on flexible navigation and page layouts, to ensure you can organize your content the way you want. It is decoupled from the data sources, with support for Prometheus, JDBC, Elasticsearch, Kafka, CVS, and Java Beans. It has a simple JavaScript API for extensions and provides out-of-the-box support for Victory Charts and Apex Charts - with the later providing time series support.
 
 [![Dashbuilder](/assets/2021/dbblog0.gif "Dashbuilder")](/assets/2021/dbblog0.gif)
 
@@ -27,9 +27,9 @@ After creating your pages, Dashbuilder also lets you create versatile navigation
 
 [![Dashbuilder](/assets/2021/dbblog2.gif "Dashbuilder")](/assets/2021/dbblog2.gif)
 
-## Prometheus, Kafka, Elastic Search, Kafka, Elastic Search, CSV and JDBC Support
+## Prometheus, Kafka, Elasticsearch, CSV and JDBC Support
 
-Dashbuilder can extract data from heterogeneous sources of information such as  Prometheus, JDBC, Elastic Search, Kafka, CVS, and Java Beans. This raw data can be later grouped, filtered, transposed, and personalized and then used as input for each component. 
+Dashbuilder can extract data from heterogeneous sources of information such as  Prometheus, JDBC, Elasticsearch, Kafka, CVS, and Java Beans. This raw data can be later grouped, filtered, transposed, and personalized and then used as input for each component. 
 
 [![Dashbuilder](/assets/2021/dbblog3.gif "Dashbuilder")](/assets/2021/dbblog3.gif)
 
