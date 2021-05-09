@@ -284,3 +284,9 @@ talks:
     year: 2021
     color: "#d1495bff"
     file_name: "MicrofrontendsAdoption_Multiplying.pdf"
+
+  - title: "Open source software development: a professional view"
+    conference: "Guest Lecture at Universitat Autònoma de Barcelona"
+    year: 2021
+    color: "#30638eff"
+    file_name: "TalkUAB.pdf"
