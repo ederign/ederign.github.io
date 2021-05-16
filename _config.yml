@@ -290,3 +290,9 @@ talks:
     year: 2021
     color: "#30638eff"
     file_name: "TalkUAB.pdf"
+
+  - title: "Cloud-native business automation with Kogito"
+    conference: "Guest Lecture at Universitat Autònoma de Barcelona"
+    year: 2021
+    color: "#d1495bff"
+    file_name: "Cloud-native business automation with Kogito for building open source intelligent applications.pdf"
