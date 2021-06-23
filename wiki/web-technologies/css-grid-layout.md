@@ -4,6 +4,8 @@ title: CSS Grid Layout
 last_updated: 2021-06-23
 ---
 
+[![CSS GRID](/assets/2021/wiki/css-grid.gif "CSS GRID")](/assets/2021/wiki/css-grid.gif)
+
 ### Links
 
 * [GitHub Repo with nested layout](https://github.com/ederign/form-test)
