@@ -38,10 +38,10 @@ the ability to upgrade, update, or even rewrite parts of the frontend in a more 
 - Simple, decoupled codebases
 - Independent deployment
 
-[![Sample Application](/assets/2021/wiki/deployment-micro.png "Sample Application")](/assets/2021/wiki/deployment-micro.png)
+[![Sample Application](/assets/deployment-micro.png "Sample Application")](/assets/deployment-micro.png)
 
 - Autonomous teams
-[![Sample Application](/assets/2021/wiki/horizontal.png "Sample Application")](/assets/2021/wiki/horizontal.png)
+[![Sample Application](/assets/horizontal.png "Sample Application")](/assets/horizontal.png)
 
 ##### Integration approaches
 
@@ -115,7 +115,7 @@ A newer approach is to apply all styles programatically with CSS modules or one 
 #### Backend communication
 
 - Autonomous teams
-[![Sample Application](/assets/2021/wiki/bff-m.png "Sample Application")](/assets/2021/wiki/bff-m.png)
+[![Sample Application](/assets/bff-m.png "Sample Application")](/assets/bff-m.png)
 
 
 #### Downsides
