@@ -291,8 +291,14 @@ talks:
     color: "#30638eff"
     file_name: "TalkUAB.pdf"
 
-  - title: "Cloud-native business automation with Kogito"
-    conference: "Guest Lecture at Universitat Autònoma de Barcelona"
+  - title: "Lessons learned after 18 months of Micro Frontends adoption"
+    conference: "TDC Transformation 2021"
     year: 2021
-    color: "#d1495bff"
-    file_name: "Cloud-native business automation with Kogito for building open source intelligent applications.pdf"
+    color: "#00798cff"
+    file_name: "MicrofrontendsAdoption_Multiplying.pdf"
+
+  - title: "Migrating DashBuilder to Quarkus"
+    conference: "TDC Transformation 2021"
+    year: 2021
+    color: "#edae49ff"
+    file_name: "migrating-dashbuilder.pdf"
