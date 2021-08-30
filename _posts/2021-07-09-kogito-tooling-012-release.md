@@ -49,9 +49,13 @@ We made many improvements on resizing control points for our BPMN and DMN editor
 
 ### Support for process metadata attributes
 
-We also added a new AdvancedData that allows users to add generic metadata to all node types and event types in the BPMN editor. 
+We also added a new AdvancedData that allows users to add generic metadata to all node types and event types in the BPMN editor.
 
-[![Metadata](/assets/2021/metatada.png "Metadata * [KOGITO-2313](https://issues.redhat.com/browse/KOGITO-4136)  - BPMN Editor - Support for node/events metadata attributes
+[![Metadata](/assets/2021/metatada.png "Metadata
+
+### New Features, fixed issues, and improvements
+
+* [KOGITO-2313](https://issues.redhat.com/browse/KOGITO-4136)  - BPMN Editor - Support for node/events metadata attributes
 * [KOGITO-5072](https://issues.redhat.com/browse/KOGITO-5072)  - DMN Developer Sandbox for Red Hat OpenShift
 * [KOGITO-1686](https://issues.redhat.com/browse/KOGITO-1686) - DMN target position is not stored
 * [KOGITO-3164](https://issues.redhat.com/browse/KOGITO-3164) - Stunner - Task Resize option doesn't show up
