@@ -51,7 +51,7 @@ We made many improvements on resizing control points for our BPMN and DMN editor
 
 We also added a new AdvancedData that allows users to add generic metadata to all node types and event types in the BPMN editor.
 
-[![Metadata](/assets/2021/metatada.png "Metadata
+[![Metadata](/assets/2021/metatada.png "Metadata")](/assets/2021/resize.gif)
 
 ### New Features, fixed issues, and improvements
 
