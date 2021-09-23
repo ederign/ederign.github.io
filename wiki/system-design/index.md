@@ -7,6 +7,8 @@ Some past and current raw notes of my R&D and discoveries related to Systems Des
 
 ### Notes
 
+* TBD
+
 ### Current WIP notes
 
 * [Consistent Hashing and Dynamo DB](./consistent-hashing)
@@ -14,5 +16,5 @@ Some past and current raw notes of my R&D and discoveries related to Systems Des
 
 ### Backlog
 
-Back of Envelope Estimation
-Design a Rate Limiter
+* Back of Envelope Estimation
+* Design a Rate Limiter
