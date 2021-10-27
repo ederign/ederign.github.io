@@ -5,16 +5,15 @@ last_updated: 2021-09-13
 ---
 Some past and current raw notes of my R&D and discoveries related to Systems Design.
 
-### Notes
+### What I'm currently reading
 
-* TBD
+* [Database Internals](./database-internals)
 
-### Current WIP notes
+### What I'm currently studying
 
-* [Consistent Hashing and Dynamo DB](./consistent-hashing)
+* [Consistent Hashing](./consistent-hashing)
 * [Hash Functions and Hash Tables](./hash-functions)
 
 ### Backlog
 
-* Back of Envelope Estimation
-* Design a Rate Limiter
+* .
