@@ -302,3 +302,9 @@ talks:
     year: 2021
     color: "#edae49ff"
     file_name: "migrating-dashbuilder.pdf"
+
+  - title: "From Java 11 to Java 17 (and beyond)"
+    conference: "Dev Nation LATAM"
+    year: 2021
+    color: "#30638eff"
+    file_name: "From Java 11 to Java 17 (and beyond).pdf"
