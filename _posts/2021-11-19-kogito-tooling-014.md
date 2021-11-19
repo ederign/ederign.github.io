@@ -87,7 +87,7 @@ Please take a look at this [blog post](https://blog.kie.org/2021/09/visualize-ed
 * [KOGITO-5721](https://issues.redhat.com/browse/KOGITO-5721) - Filled DateTime field on Dev Sandbox form break Runner when it's opened on Online Editor
 * [KOGITO-5447](https://issues.redhat.com/browse/KOGITO-5447) - kogito-examples non unique packages
 * [KOGITO-5613](https://issues.redhat.com/browse/KOGITO-5613) - kogito-editors-java pre push hooks
-* [KOGITO-5728](https://issues.redhat.com/browse/KOGITO-5728) - [DMN Designer] New Boxed Expression editor - Remove "|" grip from the * new boxed expression editor
+* [KOGITO-5728](https://issues.redhat.com/browse/KOGITO-5728) - [DMN Designer] New Boxed Expression editor - Remove | grip from the * new boxed expression editor
 * [KOGITO-5756](https://issues.redhat.com/browse/KOGITO-5756) - Improvements for the KIE Tooling Extended Services outdated icon
 * [KOGITO-5792](https://issues.redhat.com/browse/KOGITO-5792) - Fix Quarkus Dev UI DEV mode
 
