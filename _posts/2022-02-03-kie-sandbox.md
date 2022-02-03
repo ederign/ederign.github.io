@@ -3,7 +3,7 @@ layout: post
 title:  "KIE Sandbox: top 7 key new features"
 permalink: /:year/:month/:day/:title:output_ext
 date:   2022-02-03 00:00:00 -0500
-fav: false
+fav: true
 ---
 
 In the last months of 2021, the ".NEW environment" (bpmn.new, dmn.new) received a massive update, and now it's named [KIE Sandbox](https://sandbox.kie.org/)! Dealing with complex models and collaborating with others has just become much easier.
@@ -56,7 +56,7 @@ Do you want to run KIE Sandbox in your cluster? The Kogito Tooling release 0.16.
 
 ### How to start to use it?
 
-It's super simple. Just access https://sandbox.kie.org/
+It's super simple. Just access [https://sandbox.kie.org/](https://sandbox.kie.org/)
 
 ### Thank you to everyone involved!
 
