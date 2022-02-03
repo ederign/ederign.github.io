@@ -46,7 +46,7 @@ With a single click on our UI, you can go to VS Code Desktop and vscode.dev and 
 
 ### Try on Open Shift
 
-Do you want to share your decisions with someone to let them give it a try on your models? Just click on 'Share' to deploy your Decisions on Developer Sandbox for OpenShift.
+Do you want to share your decisions with someone to let them give it a try on your models? Just click on 'Try on Open Shift' to deploy your Decisions on Developer Sandbox for OpenShift.
 
 [![OSS](/assets/2022/kie-sandbox-openshift.gif "OSS")](/assets/2022/kie-sandbox-openshift.gif)
 
