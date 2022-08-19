@@ -308,3 +308,15 @@ talks:
     year: 2021
     color: "#30638eff"
     file_name: "From Java 11 to Java 17 (and beyond).pdf"
+
+  - title: "Desenvolvimento Open Source, uma visão profissional"
+    conference: "Universidade Federal de Uberlandia"
+    year: 2022
+    color: "#00798cff"
+    file_name: "PalestraUFUopenSource.pdf"
+
+  - title: "Lessons learned after 2 years of Micro Frontends adoption"
+    conference: "DevConf.US 2022"
+    year: 2022
+    color: "#00798cff"
+    file_name: "MicrofrontendsAdoption_Multiplying.pdf"
