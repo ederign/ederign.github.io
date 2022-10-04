@@ -29,7 +29,6 @@ Using a fast and automatic form generation and evaluation based on DMN models, D
 
 In a recent [blog post](https://social-biz.org/2022/10/03/choices-in-modeling-dmn/), Keith Swenson provided the following feedback from our tools:
 
-> Quote here.
 > What is particularly impressive is the DMN test capability. To get it to run, you need to download and start the KIE Sandbox Extended Services, which ran without a hitch. The web UI automatically noticed that the engine was installed. Then, it would automatically generate forms for inputting the data. Most impressive was that it can handle structured data records and arrays, even arrays of structured records. The output appears in the next column over. The complex table and list commands all ran. It is hard for me to really express how great it was after days of trying to get various combinations to work, to find an environment where everything ran without a problem.
 > So, if you want practical experience with DMN models and running the models, go right to KIE Sandbox. It works.
 > -- <cite>Keith Swenson</cite>
