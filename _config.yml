@@ -320,3 +320,9 @@ talks:
     year: 2022
     color: "#00798cff"
     file_name: "MicrofrontendsAdoption_Multiplying.pdf"
+
+  - title: "How community engagement can boost your Staff-Plus career"
+    conference: "QCon San Francisco 2022"
+    year: 2022
+    color: "#edae49ff"
+    file_name: "qconsf2022.pdf"

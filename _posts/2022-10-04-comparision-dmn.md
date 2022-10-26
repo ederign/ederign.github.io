@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Comparing Choices in Modeling DMN"
+title: "Comparing Choices in DMN Modeling"
 permalink: /:year/:month/:day/:title:output_ext
 date: 2022-10-04 00:00:00 -0500
 fav: true
