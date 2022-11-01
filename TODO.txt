@@ -1,7 +1,6 @@
 - Q1
 - Q2
 - patents
-- qcon sf
 - qcon london
 - talk ufu
 - tooling full xp, dp1, dp2, etc.
