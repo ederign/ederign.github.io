@@ -332,3 +332,10 @@ talks:
     year: 2023
     color: "#00798cff"
     file_name: "qconsf2022.pdf"
+
+  - title: "Transparent web platform decoupling with Multiplying Architecture"
+    conference: "DevNation"
+    year: 2023
+    color: "#30638eff"
+    file_name: "multiplying-devnation.pdf"
+
